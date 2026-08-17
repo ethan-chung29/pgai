@@ -39,11 +39,14 @@ cp .env.example .env          # then fill in the values
 Twilio has to reach this machine, so run ngrok in its own terminal and leave it running:
 
 ```bash
+ngrok config add-authtoken <token>    # one time, from dashboard.ngrok.com
 ngrok http 5050
 ```
 
-Copy the forwarding host into `PUBLIC_HOST` in `.env` — **host only, no `https://`**. The
-free tier issues a new host every restart, so this needs updating each session.
+That's all — `PUBLIC_HOST` can stay empty. The free tier issues a new host on every
+restart, so rather than re-copying it each session, `main.py` asks the running ngrok for
+its own hostname. Set `PUBLIC_HOST` explicitly only if you are tunnelling some other way;
+an explicit value always wins.
 
 ## Running
 

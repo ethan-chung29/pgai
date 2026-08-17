@@ -41,10 +41,45 @@ def require_env(name: str) -> str:
     return value
 
 
+def strip_scheme(url: str) -> str:
+    return url.removeprefix("https://").removeprefix("http://").rstrip("/")
+
+
+def discover_ngrok_host() -> str | None:
+    """Ask the running ngrok for its own hostname.
+
+    Free-tier ngrok issues a new host every restart, so a hand-copied
+    PUBLIC_HOST goes stale constantly - and a stale host fails as silence on a
+    connected call, which is an expensive way to find out.
+    """
+    try:
+        response = requests.get("http://localhost:4040/api/tunnels", timeout=2)
+        tunnels = response.json().get("tunnels", [])
+    except (requests.RequestException, ValueError):
+        return None
+
+    for tunnel in tunnels:
+        url = tunnel.get("public_url", "")
+        if url.startswith("https://"):
+            return strip_scheme(url)
+    return None
+
+
 def public_host() -> str:
-    """ngrok hands out a URL; we need the bare host for a wss:// stream URL."""
-    host = require_env("PUBLIC_HOST")
-    return host.removeprefix("https://").removeprefix("http://").rstrip("/")
+    """The bare host for the wss:// stream URL. Explicit config wins."""
+    configured = strip_scheme((os.getenv("PUBLIC_HOST") or "").strip())
+    if configured and "xxxx" not in configured:
+        return configured
+
+    discovered = discover_ngrok_host()
+    if discovered:
+        print(f"Using running ngrok tunnel: {discovered}")
+        return discovered
+
+    sys.exit(
+        "No PUBLIC_HOST set and no ngrok running.\n"
+        "Start the tunnel:  ngrok http 5050"
+    )
 
 
 def check_bridge_running():
