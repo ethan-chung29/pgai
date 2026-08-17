@@ -36,6 +36,24 @@ DEFAULT_SCENARIO = next(iter(SCENARIOS))
 # like a mid-call crash rather than a setup problem.
 SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 
+TRANSCRIBE_MODEL = os.getenv("TRANSCRIBE_MODEL", "gpt-4o-transcribe")
+
+# "semantic_vad" waits for a thought to finish rather than for silence to
+# elapse; "server_vad" is the fallback if it misbehaves on phone audio.
+if os.getenv("TURN_DETECTION", "semantic") == "semantic":
+    TURN_DETECTION = {
+        "type": "semantic_vad",
+        "eagerness": os.getenv("VAD_EAGERNESS", "medium"),
+        "interrupt_response": True,
+    }
+else:
+    TURN_DETECTION = {
+        "type": "server_vad",
+        "threshold": 0.5,
+        "prefix_padding_ms": 300,
+        "silence_duration_ms": int(os.getenv("SILENCE_MS", 700)),
+    }
+
 twilio_client = Client(
     os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"]
 )
@@ -117,25 +135,29 @@ class CallSession:
         self.last_assistant_item = None
         self.marks = []
 
+        # Where each side's current turn actually began in the audio. Recognition
+        # finishes at unpredictable delays, so stamping on event arrival puts
+        # turns in the wrong place - and bug reports cite these stamps.
+        self.agent_turn_start_ms = 0
+        self.bot_turn_start_ms = 0
+
     @staticmethod
     def stamp(ms: int) -> str:
         seconds = ms // 1000
         return f"{seconds // 60:02d}:{seconds % 60:02d}"
 
-    def record_turn(self, speaker: str, text: str):
-        """Stamp turns against Twilio's media clock, not wall time.
+    def record_turn(self, speaker: str, text: str, at_ms: int):
+        """Record a turn at the audio position where the speech actually began.
 
-        Bug reports cite [mm:ss] and a reviewer checks it against the MP3, so the
-        stamp has to be in the recording's own time base. Wall time would include
-        dial and setup before audio began, and drift from there.
-
-        Caveat that survives this fix: transcription completes after the speech
-        it describes, so a stamp marks roughly where a turn *ended*.
+        Bug reports cite [mm:ss] and a reviewer checks it against the MP3, so a
+        stamp has to land where the words are. Both sides report their own start
+        position - the agent via speech_started, the bot via the moment its audio
+        began streaming out - because transcription completes later, and by a
+        different delay for each side.
         """
         text = (text or "").strip()
         if not text:
             return
-        at_ms = self.latest_media_ts
         self.turns.append(
             {
                 "at_ms": at_ms,
@@ -159,13 +181,13 @@ class CallSession:
                         "audio": {
                             "input": {
                                 "format": {"type": "audio/pcmu"},
-                                "transcription": {"model": "whisper-1"},
-                                "turn_detection": {
-                                    "type": "server_vad",
-                                    "threshold": 0.5,
-                                    "prefix_padding_ms": 300,
-                                    "silence_duration_ms": 700,
-                                },
+                                # whisper-1 misreads 8kHz phone audio badly, and
+                                # bug reports get quoted from these transcripts.
+                                "transcription": {"model": TRANSCRIBE_MODEL},
+                                # semantic_vad decides a turn ended from meaning
+                                # rather than silence alone, so it stops cutting
+                                # the other party off mid-sentence.
+                                "turn_detection": TURN_DETECTION,
                             },
                             "output": {
                                 "format": {"type": "audio/pcmu"},
@@ -232,13 +254,21 @@ class CallSession:
                     await self.forward_audio(twilio_ws, event)
 
                 elif kind == "input_audio_buffer.speech_started":
+                    # Real position in the input audio, reported by the API.
+                    self.agent_turn_start_ms = event.get(
+                        "audio_start_ms", self.latest_media_ts
+                    )
                     await self.handle_barge_in(twilio_ws, openai_ws)
 
                 elif kind == "conversation.item.input_audio_transcription.completed":
-                    self.record_turn("CLINIC_AGENT", event.get("transcript"))
+                    self.record_turn(
+                        "CLINIC_AGENT", event.get("transcript"), self.agent_turn_start_ms
+                    )
 
                 elif kind == "response.output_audio_transcript.done":
-                    self.record_turn("PATIENT_BOT", event.get("transcript"))
+                    self.record_turn(
+                        "PATIENT_BOT", event.get("transcript"), self.bot_turn_start_ms
+                    )
 
                 elif kind == "response.function_call_arguments.done":
                     if event.get("name") == "hang_up":
@@ -263,6 +293,8 @@ class CallSession:
         if item_id and item_id != self.last_assistant_item:
             self.last_assistant_item = item_id
             self.response_start_ts = self.latest_media_ts
+            # First audio of a new reply: this is where the bot starts speaking.
+            self.bot_turn_start_ms = self.latest_media_ts
 
         await twilio_ws.send_json(
             {
