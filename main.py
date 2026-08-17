@@ -199,12 +199,13 @@ def cmd_call(args):
     check_bridge_running()
     client = Client(require_env("TWILIO_ACCOUNT_SID"), require_env("TWILIO_AUTH_TOKEN"))
 
-    if args.scenario == "all":
+    if "all" in args.scenarios:
         targets = list(SCENARIOS)
-    elif args.scenario in SCENARIOS:
-        targets = [args.scenario]
     else:
-        sys.exit(f"Unknown scenario '{args.scenario}'. Try: python main.py list")
+        unknown = [s for s in args.scenarios if s not in SCENARIOS]
+        if unknown:
+            sys.exit(f"Unknown scenario(s): {', '.join(unknown)}. Try: main.py list")
+        targets = args.scenarios
 
     for index, scenario in enumerate(targets, start=1):
         print(f"\n=== [{index}/{len(targets)}] {scenario} ===")
@@ -240,8 +241,10 @@ def main():
         func=cmd_fetch
     )
 
-    call_parser = subparsers.add_parser("call", help="place a call")
-    call_parser.add_argument("scenario", help="scenario name, or 'all'")
+    call_parser = subparsers.add_parser("call", help="place one or more calls")
+    call_parser.add_argument(
+        "scenarios", nargs="+", help="one or more scenario names, or 'all'"
+    )
     call_parser.set_defaults(func=cmd_call)
 
     args = parser.parse_args()
