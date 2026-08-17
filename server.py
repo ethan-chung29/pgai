@@ -8,9 +8,11 @@ Both sides are mu-law 8kHz, so audio passes through untranscoded.
 import asyncio
 import json
 import os
+import ssl
 from datetime import datetime, timezone
 from pathlib import Path
 
+import certifi
 import websockets
 from dotenv import load_dotenv
 from fastapi import FastAPI, WebSocket
@@ -27,6 +29,12 @@ VOICE = os.getenv("REALTIME_VOICE", "alloy")
 PORT = int(os.getenv("PORT", 5050))
 TRANSCRIPT_DIR = Path(os.getenv("TRANSCRIPT_DIR", "transcripts"))
 DEFAULT_SCENARIO = next(iter(SCENARIOS))
+
+# Trust certifi's CA bundle explicitly rather than whatever the interpreter was
+# configured with. A python.org install on macOS ships with no root certificates
+# until you run "Install Certificates.command", and the resulting failure looks
+# like a mid-call crash rather than a setup problem.
+SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 
 twilio_client = Client(
     os.environ["TWILIO_ACCOUNT_SID"], os.environ["TWILIO_AUTH_TOKEN"]
@@ -68,7 +76,9 @@ async def media_stream(twilio_ws: WebSocket):
     headers = {"Authorization": f"Bearer {OPENAI_API_KEY}"}
 
     try:
-        async with websockets.connect(url, additional_headers=headers) as openai_ws:
+        async with websockets.connect(
+            url, additional_headers=headers, ssl=SSL_CONTEXT
+        ) as openai_ws:
             pumps = [
                 asyncio.create_task(call.pump_twilio_to_openai(twilio_ws, openai_ws)),
                 asyncio.create_task(call.pump_openai_to_twilio(twilio_ws, openai_ws)),

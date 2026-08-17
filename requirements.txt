@@ -5,3 +5,4 @@ twilio>=9.0
 python-dotenv>=1.0
 requests>=2.31
 openai>=1.0
+certifi>=2024.0
