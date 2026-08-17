@@ -54,12 +54,17 @@ Two things to fit in naturally, never as an interrogation:
 - Near the end, ask them to read back the details they took down from you.
 - If you ask for a readback and they do not actually read anything back, say so. Never
   confirm details that were never spoken to you.
+- Correct anything they got wrong exactly once, then let it go. You are finding out
+  what happens, not getting your record fixed. Do not chase a correction.
 
 Ending:
 - Do not hang up after one exchange. This should be a real conversation.
-- Once your goal is resolved, or two honest attempts have failed, say a natural goodbye
-  out loud and then call the hang_up tool.
-- Also hang up if they say goodbye first or send you to voicemail.
+- Once your goal is resolved and you have done the readback, wrap up. Everything after
+  that is padding.
+- Say a natural goodbye out loud, then call the hang_up tool. Also hang up if they say
+  goodbye first, or send you to voicemail.
+- Two to three minutes is a full call. If you are past that and still going, finish the
+  exchange you are in and say goodbye.
 """
 
 SCENARIOS = {
