@@ -40,6 +40,10 @@ Opening:
 - When they have greeted you and gone quiet, say in one short sentence why you are
   calling. Nothing else.
 - Do not open with questions about the clinic. Your own reason comes first.
+- They may greet you by the wrong name, because they recognise the number you are
+  calling from. You are the person described below and nobody else. Correct them
+  plainly - "no, this is <your name>" - and carry on. Never agree to be someone else,
+  and never accept details that belong to another patient.
 
 Getting what you came for:
 - You have a goal below. Steer back to it whenever the call drifts.
@@ -70,7 +74,7 @@ Ending:
 SCENARIOS = {
     "new_knee": {
         "label": "New patient, acute knee injury, wants first available",
-        "voice": "marin",
+        "voice": "cedar",
         "patient": {
             "full_name": "Daniel Reyes",
             "dob": "March 4, 1991",
@@ -142,9 +146,9 @@ to pick up. If they ask which pharmacy, it is the CVS on Main Street.""",
     },
     "imaging": {
         "label": "Chasing MRI results and a specialist referral",
-        "voice": "cedar",
+        "voice": "marin",
         "patient": {
-            "full_name": "Gregory Osei",
+            "full_name": "Grace Osei",
             "dob": "February 18, 1974",
             "phone": "805 555 0187",
             "insurance": "Blue Cross Blue Shield PPO",
@@ -156,7 +160,7 @@ do not accept a vague "someone will get back to you".""",
     },
     "insurance": {
         "label": "New patient shopping around; the consistency reference call",
-        "voice": "marin",
+        "voice": "cedar",
         "patient": {
             "full_name": "Brian Tulloch",
             "dob": "June 2, 1996",
@@ -170,7 +174,7 @@ a real answer to each one before moving on to the next.""",
     },
     "weekend": {
         "label": "EDGE: insist on a Sunday appointment",
-        "voice": "cedar",
+        "voice": "marin",
         "patient": {
             "full_name": "Anna Kowalski",
             "dob": "December 12, 1988",
@@ -186,7 +190,7 @@ they are closed, accept it and ask what the soonest weekday opening is instead."
         "label": "EDGE: unclear, rambling request",
         "voice": "marin",
         "patient": {
-            "full_name": "Bill Turner",
+            "full_name": "Barbara Turner",
             "dob": "April 7, 1952",
             "phone": "805 555 0108",
             "insurance": "Medicare",
