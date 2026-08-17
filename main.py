@@ -7,6 +7,7 @@ Run the bridge first (see README), then:
 """
 
 import argparse
+import json
 import os
 import sys
 import time
@@ -32,6 +33,7 @@ MAX_CALL_SECONDS = 300
 
 PORT = int(os.getenv("PORT", 5050))
 RECORDING_DIR = Path(os.getenv("RECORDING_DIR", "recordings"))
+TRANSCRIPT_DIR = Path(os.getenv("TRANSCRIPT_DIR", "transcripts"))
 
 
 def require_env(name: str) -> str:
@@ -117,7 +119,7 @@ def place_call(client: Client, scenario: str) -> str:
         recording_channels="dual",
         time_limit=MAX_CALL_SECONDS,
     )
-    print(f"Dialling {to_number} as '{scenario}' -> {call.sid}")
+    print(f"Dialling {TEST_NUMBER} as '{scenario}' -> {call.sid}")
     return call.sid
 
 
@@ -132,39 +134,59 @@ def wait_for_call(client: Client, call_sid: str) -> str:
         time.sleep(3)
 
 
-def download_recording(client: Client, call_sid: str, scenario: str):
-    """Twilio needs a moment to finalise a recording, so back off rather than guess."""
+def download_recording(client: Client, call_sid: str, stem: str, wait: bool = True):
+    """Save a call's recording as recordings/<stem>.mp3.
+
+    The stem matches the transcript's filename so a reviewer can pair audio with
+    text at a glance - the bug report cites both.
+    """
     account_sid = require_env("TWILIO_ACCOUNT_SID")
     auth_token = require_env("TWILIO_AUTH_TOKEN")
 
-    for delay in (3, 5, 8, 13, 21):
+    delays = (3, 5, 8, 13, 21) if wait else (0,)
+    for delay in delays:
         recordings = client.recordings.list(call_sid=call_sid)
         if recordings:
             break
         time.sleep(delay)
     else:
-        print("No recording appeared. Check the Twilio console.")
-        return
+        print(f"  no recording yet for {stem}")
+        return False
 
     RECORDING_DIR.mkdir(exist_ok=True)
-    for recording in recordings:
-        url = f"https://api.twilio.com{recording.uri.replace('.json', '.mp3')}"
-        response = requests.get(url, auth=(account_sid, auth_token), timeout=60)
-        response.raise_for_status()
+    url = f"https://api.twilio.com{recordings[0].uri.replace('.json', '.mp3')}"
+    response = requests.get(url, auth=(account_sid, auth_token), timeout=60)
+    response.raise_for_status()
 
-        stamp = recording.date_created.strftime("%Y%m%d-%H%M%S")
-        path = RECORDING_DIR / f"{stamp}-{scenario}.mp3"
-        path.write_bytes(response.content)
-        print(f"Saved recording: {path}")
+    path = RECORDING_DIR / f"{stem}.mp3"
+    path.write_bytes(response.content)
+    print(f"  saved {path}")
+    return True
+
+
+def transcripts_missing_audio():
+    """Pair each transcript with its recording, yielding the ones not downloaded."""
+    for path in sorted(TRANSCRIPT_DIR.glob("*.json")):
+        if (RECORDING_DIR / f"{path.stem}.mp3").exists():
+            continue
+        call_sid = json.loads(path.read_text()).get("call_sid")
+        if call_sid:
+            yield call_sid, path.stem
 
 
 def run_scenario(client: Client, scenario: str):
     call_sid = place_call(client, scenario)
     status = wait_for_call(client, call_sid)
-    if status == "completed":
-        download_recording(client, call_sid, scenario)
-    else:
-        print(f"Skipping recording download - call ended as '{status}'.")
+    if status != "completed":
+        print(f"Call ended as '{status}' - no recording to fetch.")
+        return
+
+    # The bridge names the transcript, so look it up rather than guessing.
+    for sid, stem in transcripts_missing_audio():
+        if sid == call_sid:
+            download_recording(client, call_sid, stem)
+            return
+    print("Transcript not found yet; run 'python main.py fetch' shortly.")
 
 
 def cmd_list(_args):
@@ -195,12 +217,27 @@ def cmd_call(args):
             time.sleep(10)
 
 
+def cmd_fetch(_args):
+    """Download any recording whose transcript exists but whose audio does not."""
+    client = Client(require_env("TWILIO_ACCOUNT_SID"), require_env("TWILIO_AUTH_TOKEN"))
+    pending = list(transcripts_missing_audio())
+    if not pending:
+        print("Every transcript already has its recording.")
+        return
+    print(f"Fetching {len(pending)} recording(s):")
+    for call_sid, stem in pending:
+        download_recording(client, call_sid, stem, wait=False)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     subparsers.add_parser("list", help="show available scenarios").set_defaults(
         func=cmd_list
+    )
+    subparsers.add_parser("fetch", help="download any missing recordings").set_defaults(
+        func=cmd_fetch
     )
 
     call_parser = subparsers.add_parser("call", help="place a call")
