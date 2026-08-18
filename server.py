@@ -43,7 +43,9 @@ TRANSCRIBE_MODEL = os.getenv("TRANSCRIBE_MODEL", "gpt-4o-transcribe")
 if os.getenv("TURN_DETECTION", "semantic") == "semantic":
     TURN_DETECTION = {
         "type": "semantic_vad",
-        "eagerness": os.getenv("VAD_EAGERNESS", "medium"),
+        # "high" answers sooner at the cost of occasionally cutting in early.
+        # A caller who leaves multi-second holes does not sound human either.
+        "eagerness": os.getenv("VAD_EAGERNESS", "high"),
         "interrupt_response": True,
     }
 else:
@@ -139,6 +141,7 @@ class CallSession:
         # finishes at unpredictable delays, so stamping on event arrival puts
         # turns in the wrong place - and bug reports cite these stamps.
         self.agent_turn_start_ms = 0
+        self.agent_turn_end_ms = 0
         self.bot_turn_start_ms = 0
 
     @staticmethod
@@ -158,15 +161,23 @@ class CallSession:
         text = (text or "").strip()
         if not text:
             return
-        self.turns.append(
-            {
-                "at_ms": at_ms,
-                "at": self.stamp(at_ms),
-                "speaker": speaker,
-                "text": text,
-            }
-        )
-        print(f"[{self.stamp(at_ms)}] {speaker}: {text}")
+
+        turn = {
+            "at_ms": at_ms,
+            "at": self.stamp(at_ms),
+            "speaker": speaker,
+            "text": text,
+        }
+
+        # How long the caller was left hanging before this reply. The single
+        # number that says whether the call sounds natural.
+        if speaker == "PATIENT_BOT" and self.agent_turn_end_ms:
+            turn["reply_delay_ms"] = max(0, at_ms - self.agent_turn_end_ms)
+
+        self.turns.append(turn)
+        delay = turn.get("reply_delay_ms")
+        suffix = f"  (+{delay / 1000:.1f}s)" if delay is not None else ""
+        print(f"[{self.stamp(at_ms)}] {speaker}: {text}{suffix}")
 
     async def configure_session(self, openai_ws):
         await openai_ws.send(
@@ -259,6 +270,13 @@ class CallSession:
                         "audio_start_ms", self.latest_media_ts
                     )
                     await self.handle_barge_in(twilio_ws, openai_ws)
+
+                elif kind == "input_audio_buffer.speech_stopped":
+                    # Where the agent stopped talking, so the wait before the bot
+                    # answers can be measured instead of guessed at.
+                    self.agent_turn_end_ms = event.get(
+                        "audio_end_ms", self.latest_media_ts
+                    )
 
                 elif kind == "conversation.item.input_audio_transcription.completed":
                     self.record_turn(
