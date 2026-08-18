@@ -1,0 +1,180 @@
+{
+  "call_sid": "CA295c9b2f034038eb1e2e5ef832fd883f",
+  "scenario": "vague",
+  "recorded_at": "2026-08-18T18:36:30.409484+00:00",
+  "turns": [
+    {
+      "at_ms": 6284,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "This call may be recorded for quality and training purposes. Para espa\u00f1ol, oprima el dos."
+    },
+    {
+      "at_ms": 6284,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?"
+    },
+    {
+      "at_ms": 15052,
+      "at": "00:15",
+      "speaker": "PATIENT_BOT",
+      "text": "I'm calling about, uh, the thing with my shoulder.",
+      "reply_delay_ms": 2330
+    },
+    {
+      "at_ms": 22700,
+      "at": "00:22",
+      "speaker": "CLINIC_AGENT",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Daniel?"
+    },
+    {
+      "at_ms": 28392,
+      "at": "00:28",
+      "speaker": "PATIENT_BOT",
+      "text": "No, this is Barbara Turner.",
+      "reply_delay_ms": 1051
+    },
+    {
+      "at_ms": 32172,
+      "at": "00:32",
+      "speaker": "CLINIC_AGENT",
+      "text": "Please provide your date of birth."
+    },
+    {
+      "at_ms": 35252,
+      "at": "00:35",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, it's April 7, 1952.",
+      "reply_delay_ms": 449
+    },
+    {
+      "at_ms": 48876,
+      "at": "00:48",
+      "speaker": "CLINIC_AGENT",
+      "text": "Just to confirm, I have your name as Barbara Turner and your date of birth as April 7, 1952?"
+    },
+    {
+      "at_ms": 49868,
+      "at": "00:49",
+      "speaker": "CLINIC_AGENT",
+      "text": "Is that correct?"
+    },
+    {
+      "at_ms": 49868,
+      "at": "00:49",
+      "speaker": "CLINIC_AGENT",
+      "text": "If so, please spell your first and last name for me."
+    },
+    {
+      "at_ms": 55972,
+      "at": "00:55",
+      "speaker": "PATIENT_BOT",
+      "text": "Right, it's B-A-R-B-A-R-A, T-U-R-N-E-R.",
+      "reply_delay_ms": 2268
+    },
+    {
+      "at_ms": 74796,
+      "at": "01:14",
+      "speaker": "CLINIC_AGENT",
+      "text": "Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us."
+    },
+    {
+      "at_ms": 74796,
+      "at": "01:14",
+      "speaker": "CLINIC_AGENT",
+      "text": "If you're not sure, just let me know and we can confirm your name and date of birth again."
+    },
+    {
+      "at_ms": 80932,
+      "at": "01:20",
+      "speaker": "PATIENT_BOT",
+      "text": "Oh, my number is 805 555 0108.",
+      "reply_delay_ms": 621
+    },
+    {
+      "at_ms": 90572,
+      "at": "01:30",
+      "speaker": "CLINIC_AGENT",
+      "text": "I have your phone number as 805-555-0108 and your date of birth as April 7th, 1952. Is that correct?"
+    },
+    {
+      "at_ms": 104612,
+      "at": "01:44",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, that's correct.",
+      "reply_delay_ms": 2525
+    },
+    {
+      "at_ms": 111820,
+      "at": "01:51",
+      "speaker": "CLINIC_AGENT",
+      "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?"
+    },
+    {
+      "at_ms": 122492,
+      "at": "02:02",
+      "speaker": "PATIENT_BOT",
+      "text": "Well, I was wondering, do I need a referral before seeing a specialist?",
+      "reply_delay_ms": 2239
+    },
+    {
+      "at_ms": 129260,
+      "at": "02:09",
+      "speaker": "CLINIC_AGENT",
+      "text": "That's a great question. I can't access your record right now, so our clinic support team will need to confirm your referral requirements. Would you like me to connect you to them so they can help you directly?"
+    },
+    {
+      "at_ms": 142352,
+      "at": "02:22",
+      "speaker": "PATIENT_BOT",
+      "text": "I see, uh, do you happen to know if you do cortisone shots there?",
+      "reply_delay_ms": 2403
+    },
+    {
+      "at_ms": 148748,
+      "at": "02:28",
+      "speaker": "CLINIC_AGENT",
+      "text": "Yes, Getterpoi Orthopedics does offer cortisone shots for joint and muscle conditions. If you'd like to learn more or schedule an appointment, our clinic support team can help with the details. Would you like to speak with them now?"
+    },
+    {
+      "at_ms": 163412,
+      "at": "02:43",
+      "speaker": "PATIENT_BOT",
+      "text": "Alright, before that, could you let me know what your office hours are?",
+      "reply_delay_ms": 1565
+    },
+    {
+      "at_ms": 168908,
+      "at": "02:48",
+      "speaker": "CLINIC_AGENT",
+      "text": "Our clinic is open Monday, Tuesday, and Thursday from 9 a.m. to 4 p.m., Wednesday from 12 p.m. to 7 p.m., and Friday from 9 a.m. to 12 p.m. If you need anything else, just let me know."
+    },
+    {
+      "at_ms": 180492,
+      "at": "03:00",
+      "speaker": "PATIENT_BOT",
+      "text": "Got it, thanks. Could you read back the details you noted from me so far?",
+      "reply_delay_ms": 540
+    },
+    {
+      "at_ms": 197740,
+      "at": "03:17",
+      "speaker": "CLINIC_AGENT",
+      "text": "Here's what I have: Your name is Barbara Turner, date of birth April 7, 1952, and your phone number is 805-555-0108?"
+    },
+    {
+      "at_ms": 197740,
+      "at": "03:17",
+      "speaker": "CLINIC_AGENT",
+      "text": "You asked about referrals, cortisone shots, and our office hours. Would you like to connect with our clinic support team now?"
+    },
+    {
+      "at_ms": 207532,
+      "at": "03:27",
+      "speaker": "PATIENT_BOT",
+      "text": "No, that\u2019s all good. Thanks for your help. Goodbye.",
+      "reply_delay_ms": 2441
+    }
+  ]
+}

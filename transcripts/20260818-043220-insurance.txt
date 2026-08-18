@@ -1,0 +1,26 @@
+Scenario: insurance
+Call SID: CAdd501ed6f0da45f2308730b08c607738
+
+[00:06] CLINIC_AGENT: This call may be recorded for quality and training purposes. Para español, oprima el dos.
+[00:06] CLINIC_AGENT: Thanks for calling Pivot Point Orthopedics, part of PrettyGoodAI. How may I help you today?
+[00:06] PATIENT_BOT: Hi, I'm calling
+[00:14] PATIENT_BOT: Hi, I’m looking for some information about your clinic.
+[00:19] CLINIC_AGENT: Sure. Pivot Point Orthopedics is a clinic that treats joint, muscle, and bone conditions. We offer doctor visits and physical therapy in one location.
+[00:34] PATIENT_BOT: Yeah, could you tell me what your office hours are?
+[00:39] CLINIC_AGENT: Our clinic is open Monday, Tuesday, and Thursday from 9am to 4pm, Wednesday from 12pm to 7pm, and Friday from 9am to 12pm. Is there anything else you'd like to know?
+[00:54] PATIENT_BOT: Thanks. And where exactly are you located?
+[01:05] CLINIC_AGENT: We're located at 1234 Recovery Way, Suite 200, Austin.
+[01:05] CLINIC_AGENT: Would you like directions or any other details about our clinic?
+[01:10] PATIENT_BOT: Do you accept Blue Cross Blue Shield PPO insurance?
+[01:15] CLINIC_AGENT: We accept most insurance plans, including many PPO options. If you'd like to confirm your specific Blue Cross Blue Shield PPO coverage, I can help you update or check your insurance on file. Are you an existing patient or would you like to become one?
+[01:31] PATIENT_BOT: I’m not a patient. I just want to check if you take Blue Cross Blue Shield PPO.
+[01:37] CLINIC_AGENT: We welcome new patients and accept most major insurance plans, including many Blue Cross Blue Shield PPO plans. If you decide to schedule a visit, we can confirm your coverage when you book your first appointment. Anything else I can help with?
+[01:54] PATIENT_BOT: Are you open at all on weekends?
+[01:58] CLINIC_AGENT: We're not open on weekends. Our clinic hours are Monday through Friday. If you need to schedule or ask about appointments, I can help with that.
+[02:09] PATIENT_BOT: Got it. Could you read back the details you noted from me?
+[02:20] CLINIC_AGENT: Here's what we discussed. Pivot Point Orthopedics treats joint, muscle, and bone conditions.
+[02:20] CLINIC_AGENT: Our address is 1234 Recovery Way, Suite 200, Austin. We're open Monday through Friday but closed on weekends. We accept most insurance plans, including many Blue Cross Blue Shield PPO options. Let me know if you need anything else.
+[02:37] PATIENT_BOT: I didn't hear my name or info in that. Could you read back what you got from me?
+[02:46] CLINIC_AGENT: You haven't shared your name or personal information with me yet.
+[02:46] CLINIC_AGENT: If you'd like to provide it or have other questions, just let me know.
+[02:52] PATIENT_BOT: No worries. That’s all I needed. Thanks for your help. Goodbye.

@@ -1,0 +1,155 @@
+{
+  "call_sid": "CAdd501ed6f0da45f2308730b08c607738",
+  "scenario": "insurance",
+  "recorded_at": "2026-08-18T04:32:20.032140+00:00",
+  "turns": [
+    {
+      "at_ms": 6316,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "This call may be recorded for quality and training purposes. Para espa\u00f1ol, oprima el dos."
+    },
+    {
+      "at_ms": 6316,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for calling Pivot Point Orthopedics, part of PrettyGoodAI. How may I help you today?"
+    },
+    {
+      "at_ms": 6933,
+      "at": "00:06",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I'm calling",
+      "reply_delay_ms": 450
+    },
+    {
+      "at_ms": 14853,
+      "at": "00:14",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I\u2019m looking for some information about your clinic.",
+      "reply_delay_ms": 2375
+    },
+    {
+      "at_ms": 19404,
+      "at": "00:19",
+      "speaker": "CLINIC_AGENT",
+      "text": "Sure. Pivot Point Orthopedics is a clinic that treats joint, muscle, and bone conditions. We offer doctor visits and physical therapy in one location."
+    },
+    {
+      "at_ms": 34693,
+      "at": "00:34",
+      "speaker": "PATIENT_BOT",
+      "text": "Yeah, could you tell me what your office hours are?",
+      "reply_delay_ms": 929
+    },
+    {
+      "at_ms": 39340,
+      "at": "00:39",
+      "speaker": "CLINIC_AGENT",
+      "text": "Our clinic is open Monday, Tuesday, and Thursday from 9am to 4pm, Wednesday from 12pm to 7pm, and Friday from 9am to 12pm. Is there anything else you'd like to know?"
+    },
+    {
+      "at_ms": 54553,
+      "at": "00:54",
+      "speaker": "PATIENT_BOT",
+      "text": "Thanks. And where exactly are you located?",
+      "reply_delay_ms": 2317
+    },
+    {
+      "at_ms": 65100,
+      "at": "01:05",
+      "speaker": "CLINIC_AGENT",
+      "text": "We're located at 1234 Recovery Way, Suite 200, Austin."
+    },
+    {
+      "at_ms": 65100,
+      "at": "01:05",
+      "speaker": "CLINIC_AGENT",
+      "text": "Would you like directions or any other details about our clinic?"
+    },
+    {
+      "at_ms": 70513,
+      "at": "01:10",
+      "speaker": "PATIENT_BOT",
+      "text": "Do you accept Blue Cross Blue Shield PPO insurance?",
+      "reply_delay_ms": 2068
+    },
+    {
+      "at_ms": 75820,
+      "at": "01:15",
+      "speaker": "CLINIC_AGENT",
+      "text": "We accept most insurance plans, including many PPO options. If you'd like to confirm your specific Blue Cross Blue Shield PPO coverage, I can help you update or check your insurance on file. Are you an existing patient or would you like to become one?"
+    },
+    {
+      "at_ms": 91913,
+      "at": "01:31",
+      "speaker": "PATIENT_BOT",
+      "text": "I\u2019m not a patient. I just want to check if you take Blue Cross Blue Shield PPO.",
+      "reply_delay_ms": 530
+    },
+    {
+      "at_ms": 97868,
+      "at": "01:37",
+      "speaker": "CLINIC_AGENT",
+      "text": "We welcome new patients and accept most major insurance plans, including many Blue Cross Blue Shield PPO plans. If you decide to schedule a visit, we can confirm your coverage when you book your first appointment. Anything else I can help with?"
+    },
+    {
+      "at_ms": 114853,
+      "at": "01:54",
+      "speaker": "PATIENT_BOT",
+      "text": "Are you open at all on weekends?",
+      "reply_delay_ms": 2368
+    },
+    {
+      "at_ms": 118476,
+      "at": "01:58",
+      "speaker": "CLINIC_AGENT",
+      "text": "We're not open on weekends. Our clinic hours are Monday through Friday. If you need to schedule or ask about appointments, I can help with that."
+    },
+    {
+      "at_ms": 129653,
+      "at": "02:09",
+      "speaker": "PATIENT_BOT",
+      "text": "Got it. Could you read back the details you noted from me?",
+      "reply_delay_ms": 2243
+    },
+    {
+      "at_ms": 140940,
+      "at": "02:20",
+      "speaker": "CLINIC_AGENT",
+      "text": "Here's what we discussed. Pivot Point Orthopedics treats joint, muscle, and bone conditions."
+    },
+    {
+      "at_ms": 140940,
+      "at": "02:20",
+      "speaker": "CLINIC_AGENT",
+      "text": "Our address is 1234 Recovery Way, Suite 200, Austin. We're open Monday through Friday but closed on weekends. We accept most insurance plans, including many Blue Cross Blue Shield PPO options. Let me know if you need anything else."
+    },
+    {
+      "at_ms": 157013,
+      "at": "02:37",
+      "speaker": "PATIENT_BOT",
+      "text": "I didn't hear my name or info in that. Could you read back what you got from me?",
+      "reply_delay_ms": 488
+    },
+    {
+      "at_ms": 166124,
+      "at": "02:46",
+      "speaker": "CLINIC_AGENT",
+      "text": "You haven't shared your name or personal information with me yet."
+    },
+    {
+      "at_ms": 166124,
+      "at": "02:46",
+      "speaker": "CLINIC_AGENT",
+      "text": "If you'd like to provide it or have other questions, just let me know."
+    },
+    {
+      "at_ms": 172393,
+      "at": "02:52",
+      "speaker": "PATIENT_BOT",
+      "text": "No worries. That\u2019s all I needed. Thanks for your help. Goodbye.",
+      "reply_delay_ms": 2411
+    }
+  ]
+}

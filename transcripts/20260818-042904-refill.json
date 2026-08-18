@@ -1,0 +1,136 @@
+{
+  "call_sid": "CA112fdc7888be431fcd9677ce7fd3a36e",
+  "scenario": "refill",
+  "recorded_at": "2026-08-18T04:29:04.980860+00:00",
+  "turns": [
+    {
+      "at_ms": 6316,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "This call may be recorded for quality and training purposes."
+    },
+    {
+      "at_ms": 6316,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for calling PivotPoint Orthopedics, part of Pretty Good AI. How may I help you today?"
+    },
+    {
+      "at_ms": 15014,
+      "at": "00:15",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I\u2019m calling because I need a refill on my pain medication.",
+      "reply_delay_ms": 2292
+    },
+    {
+      "at_ms": 21004,
+      "at": "00:21",
+      "speaker": "CLINIC_AGENT",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Daniel?"
+    },
+    {
+      "at_ms": 26534,
+      "at": "00:26",
+      "speaker": "PATIENT_BOT",
+      "text": "No, this is Priya Nair.",
+      "reply_delay_ms": 477
+    },
+    {
+      "at_ms": 30028,
+      "at": "00:30",
+      "speaker": "CLINIC_AGENT",
+      "text": "Please provide your full date of birth."
+    },
+    {
+      "at_ms": 33154,
+      "at": "00:33",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, it\u2019s September 9, 1983.",
+      "reply_delay_ms": 430
+    },
+    {
+      "at_ms": 49196,
+      "at": "00:49",
+      "speaker": "CLINIC_AGENT",
+      "text": "Just to confirm, I have your name as Priya Nayar and your date of birth as September 9th, 1983."
+    },
+    {
+      "at_ms": 49196,
+      "at": "00:49",
+      "speaker": "CLINIC_AGENT",
+      "text": "Please spell your first and last name for me."
+    },
+    {
+      "at_ms": 53034,
+      "at": "00:53",
+      "speaker": "PATIENT_BOT",
+      "text": "Yeah, it's P-R-I-Y-A, N-A-I-R.",
+      "reply_delay_ms": 737
+    },
+    {
+      "at_ms": 60908,
+      "at": "01:00",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thank you. Could you please spell your last name as well?"
+    },
+    {
+      "at_ms": 65354,
+      "at": "01:05",
+      "speaker": "PATIENT_BOT",
+      "text": "Right, my last name is N-A-I-R.",
+      "reply_delay_ms": 640
+    },
+    {
+      "at_ms": 74380,
+      "at": "01:14",
+      "speaker": "CLINIC_AGENT",
+      "text": "Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?"
+    },
+    {
+      "at_ms": 88194,
+      "at": "01:28",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, my number is 805 555 0155.",
+      "reply_delay_ms": 2378
+    },
+    {
+      "at_ms": 96812,
+      "at": "01:36",
+      "speaker": "CLINIC_AGENT",
+      "text": "I have your phone number as 805-555-0155 and your date of birth as September 9th, 1983."
+    },
+    {
+      "at_ms": 110094,
+      "at": "01:50",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, that\u2019s correct.",
+      "reply_delay_ms": 2441
+    },
+    {
+      "at_ms": 117132,
+      "at": "01:57",
+      "speaker": "CLINIC_AGENT",
+      "text": "I'm unable to locate your record in our system. I can connect you to our patient support team for help. Would you like me to transfer you now?"
+    },
+    {
+      "at_ms": 128194,
+      "at": "02:08",
+      "speaker": "PATIENT_BOT",
+      "text": "Oh, before that, could you tell me your office hours?",
+      "reply_delay_ms": 2313
+    },
+    {
+      "at_ms": 133580,
+      "at": "02:13",
+      "speaker": "CLINIC_AGENT",
+      "text": "Pivot Point Orthopedics is open Monday, Tuesday, and Thursday from 9 a.m. to 4 p.m., Wednesday from 12 p.m. to 7 p.m., and Friday from 9 a.m. to 12 p.m. Would you like to continue with the transfer to our support team?"
+    },
+    {
+      "at_ms": 148434,
+      "at": "02:28",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, please go ahead and transfer me.",
+      "reply_delay_ms": 717
+    }
+  ]
+}

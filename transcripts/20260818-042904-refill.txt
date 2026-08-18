@@ -1,0 +1,23 @@
+Scenario: refill
+Call SID: CA112fdc7888be431fcd9677ce7fd3a36e
+
+[00:06] CLINIC_AGENT: This call may be recorded for quality and training purposes.
+[00:06] CLINIC_AGENT: Thanks for calling PivotPoint Orthopedics, part of Pretty Good AI. How may I help you today?
+[00:15] PATIENT_BOT: Hi, I’m calling because I need a refill on my pain medication.
+[00:21] CLINIC_AGENT: I see you're calling from the number we have on file. Am I speaking with Daniel?
+[00:26] PATIENT_BOT: No, this is Priya Nair.
+[00:30] CLINIC_AGENT: Please provide your full date of birth.
+[00:33] PATIENT_BOT: Sure, it’s September 9, 1983.
+[00:49] CLINIC_AGENT: Just to confirm, I have your name as Priya Nayar and your date of birth as September 9th, 1983.
+[00:49] CLINIC_AGENT: Please spell your first and last name for me.
+[00:53] PATIENT_BOT: Yeah, it's P-R-I-Y-A, N-A-I-R.
+[01:00] CLINIC_AGENT: Thank you. Could you please spell your last name as well?
+[01:05] PATIENT_BOT: Right, my last name is N-A-I-R.
+[01:14] CLINIC_AGENT: Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:28] PATIENT_BOT: Sure, my number is 805 555 0155.
+[01:36] CLINIC_AGENT: I have your phone number as 805-555-0155 and your date of birth as September 9th, 1983.
+[01:50] PATIENT_BOT: Yes, that’s correct.
+[01:57] CLINIC_AGENT: I'm unable to locate your record in our system. I can connect you to our patient support team for help. Would you like me to transfer you now?
+[02:08] PATIENT_BOT: Oh, before that, could you tell me your office hours?
+[02:13] CLINIC_AGENT: Pivot Point Orthopedics is open Monday, Tuesday, and Thursday from 9 a.m. to 4 p.m., Wednesday from 12 p.m. to 7 p.m., and Friday from 9 a.m. to 12 p.m. Would you like to continue with the transfer to our support team?
+[02:28] PATIENT_BOT: Yes, please go ahead and transfer me.

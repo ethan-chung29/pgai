@@ -1,0 +1,110 @@
+{
+  "call_sid": "CAedce3a565dd445f882a148946dc42f1f",
+  "scenario": "cancel",
+  "recorded_at": "2026-08-18T18:27:27.404021+00:00",
+  "turns": [
+    {
+      "at_ms": 6732,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "This call may be recorded for quality and training purposes. Para espa\u00f1ol, oprima el dos."
+    },
+    {
+      "at_ms": 6732,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?"
+    },
+    {
+      "at_ms": 7268,
+      "at": "00:07",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I\u2019m calling to",
+      "reply_delay_ms": 418
+    },
+    {
+      "at_ms": 15648,
+      "at": "00:15",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I need to cancel my upcoming shoulder consult.",
+      "reply_delay_ms": 2314
+    },
+    {
+      "at_ms": 21836,
+      "at": "00:21",
+      "speaker": "CLINIC_AGENT",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Daniel?"
+    },
+    {
+      "at_ms": 27068,
+      "at": "00:27",
+      "speaker": "PATIENT_BOT",
+      "text": "No, this is Tom Whitfield.",
+      "reply_delay_ms": 400
+    },
+    {
+      "at_ms": 30508,
+      "at": "00:30",
+      "speaker": "CLINIC_AGENT",
+      "text": "Please provide your date of birth."
+    },
+    {
+      "at_ms": 34088,
+      "at": "00:34",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, it's January 30, 1965.",
+      "reply_delay_ms": 1303
+    },
+    {
+      "at_ms": 49292,
+      "at": "00:49",
+      "speaker": "CLINIC_AGENT",
+      "text": "Just to confirm, I have your name as Tom Whitfield and your date of birth as January 30."
+    },
+    {
+      "at_ms": 49292,
+      "at": "00:49",
+      "speaker": "CLINIC_AGENT",
+      "text": "1965. Is that correct? If so, could you please spell your first and last name for me?"
+    },
+    {
+      "at_ms": 56788,
+      "at": "00:56",
+      "speaker": "PATIENT_BOT",
+      "text": "Yeah, that's correct. It\u2019s T-O-M, W-H-I-T-F-I-E-L-D.",
+      "reply_delay_ms": 515
+    },
+    {
+      "at_ms": 75724,
+      "at": "01:15",
+      "speaker": "CLINIC_AGENT",
+      "text": "Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us."
+    },
+    {
+      "at_ms": 75724,
+      "at": "01:15",
+      "speaker": "CLINIC_AGENT",
+      "text": "If you're not sure, just confirm your first and last name and date of birth for me one more time."
+    },
+    {
+      "at_ms": 83768,
+      "at": "01:23",
+      "speaker": "PATIENT_BOT",
+      "text": "It's Tom Whitfield, date of birth January 30, 1965.",
+      "reply_delay_ms": 2294
+    },
+    {
+      "at_ms": 108492,
+      "at": "01:48",
+      "speaker": "CLINIC_AGENT",
+      "text": "I'm unable to locate your record in our system right now. I'll connect you to our patient support team for help with your cancellation. Please stay on the line. Transferring you now. Thank you."
+    },
+    {
+      "at_ms": 108624,
+      "at": "01:48",
+      "speaker": "PATIENT_BOT",
+      "text": "Oh, okay. Understood.",
+      "reply_delay_ms": 482
+    }
+  ]
+}

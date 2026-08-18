@@ -1,0 +1,22 @@
+Scenario: weekend
+Call SID: CAf49ad57283b891d9fcd5577b0ee26718
+
+[00:06] CLINIC_AGENT: This call may be recorded for quality and training purposes. Para español, oprima el dos.
+[00:06] CLINIC_AGENT: Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+[00:14] PATIENT_BOT: Hi, I need to schedule a follow-up for my knee this Sunday at ten in the morning.
+[00:22] CLINIC_AGENT: I see you're calling from a number we have on file. Am I speaking with Daniel?
+[00:29] PATIENT_BOT: No, this is Anna Kowalski.
+[00:33] CLINIC_AGENT: Please provide your date of birth.
+[00:36] PATIENT_BOT: Sure, it’s December 12, 1988.
+[00:42] CLINIC_AGENT: Just to confirm, can you please spell your first and last name for me?
+[00:47] PATIENT_BOT: Sure. First name: A-N-N-A. Last name: K-O-W-A-L-S-K-I.
+[01:01] CLINIC_AGENT: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?
+[01:16] PATIENT_BOT: My number is 805 555 0124.
+[01:26] CLINIC_AGENT: I have your phone number as 805-555-0124 and your date of birth as December 12, 1988.
+[01:38] PATIENT_BOT: Yes, that’s correct.
+[01:47] CLINIC_AGENT: I can't proceed further right now, but I can make sure our clinic support team follows up with you.
+[01:58] PATIENT_BOT: Oh, actually, I really need to know if I can get that Sunday at ten. My whole week is totally booked.
+[02:17] CLINIC_AGENT: I understand your schedule is tight. I still can't access your record, so I'll connect you to our patient support team now. Please stay on the line. Transferring you now, thank you.
+[02:17] CLINIC_AGENT: Hello, you've reached the Pretty Good AI test line. Goodbye.
+[02:18] PATIENT_BOT: All right, I'll hold on.
+[02:23] PATIENT_BOT: Goodbye.

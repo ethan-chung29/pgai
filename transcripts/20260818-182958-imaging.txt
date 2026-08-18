@@ -1,0 +1,20 @@
+Scenario: imaging
+Call SID: CA663f54be99ff5cf8362edc7d8f6f8279
+
+[00:06] CLINIC_AGENT: Esta llamada puede ser grabada para calidad y entrenamiento.
+[00:06] CLINIC_AGENT: Thanks for calling Pivot Point Orthopedics, how may I help you today?
+[00:15] PATIENT_BOT: Hi, I had an MRI on my lower back last week and I haven’t gotten the results yet.
+[00:23] CLINIC_AGENT: I see you're calling from the number we have on file. Am I speaking with Daniel?
+[00:28] PATIENT_BOT: No, this is Grace Osei.
+[00:32] CLINIC_AGENT: Please provide your full date of birth.
+[00:37] PATIENT_BOT: Sure, it’s February 18, 1974.
+[00:46] CLINIC_AGENT: Could you please spell your first and last name for me just to make sure I have it correct?
+[00:52] PATIENT_BOT: All right, first name: G-r-a-c-e, last name: O-s-e-i.
+[01:13] CLINIC_AGENT: Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, I can confirm your name and date of birth again?
+[01:13] CLINIC_AGENT: Which would you prefer?
+[01:17] PATIENT_BOT: My number’s 805 555 0187.
+[01:25] CLINIC_AGENT: I have your phone number as 805-555-0187 and your date of birth as February 18, 1974.
+[01:41] PATIENT_BOT: Yes, that’s correct. What do the MRI results show?
+[02:04] CLINIC_AGENT: I'm unable to locate your record in our system right now. I'll connect you to our patient support team so they can help you get your MRI results. Please stay on the line. Transferring you now, thank you.
+[02:04] CLINIC_AGENT: Hello, you've reached the pretty good AI test line. Goodbye.
+[02:04] PATIENT_BOT: Oh, before you transfer,

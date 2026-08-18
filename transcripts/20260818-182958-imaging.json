@@ -1,0 +1,116 @@
+{
+  "call_sid": "CA663f54be99ff5cf8362edc7d8f6f8279",
+  "scenario": "imaging",
+  "recorded_at": "2026-08-18T18:29:58.872336+00:00",
+  "turns": [
+    {
+      "at_ms": 6316,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "Esta llamada puede ser grabada para calidad y entrenamiento."
+    },
+    {
+      "at_ms": 6316,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for calling Pivot Point Orthopedics, how may I help you today?"
+    },
+    {
+      "at_ms": 15240,
+      "at": "00:15",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I had an MRI on my lower back last week and I haven\u2019t gotten the results yet.",
+      "reply_delay_ms": 2457
+    },
+    {
+      "at_ms": 23180,
+      "at": "00:23",
+      "speaker": "CLINIC_AGENT",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Daniel?"
+    },
+    {
+      "at_ms": 28900,
+      "at": "00:28",
+      "speaker": "PATIENT_BOT",
+      "text": "No, this is Grace Osei.",
+      "reply_delay_ms": 580
+    },
+    {
+      "at_ms": 32940,
+      "at": "00:32",
+      "speaker": "CLINIC_AGENT",
+      "text": "Please provide your full date of birth."
+    },
+    {
+      "at_ms": 37120,
+      "at": "00:37",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, it\u2019s February 18, 1974.",
+      "reply_delay_ms": 1399
+    },
+    {
+      "at_ms": 46860,
+      "at": "00:46",
+      "speaker": "CLINIC_AGENT",
+      "text": "Could you please spell your first and last name for me just to make sure I have it correct?"
+    },
+    {
+      "at_ms": 52260,
+      "at": "00:52",
+      "speaker": "PATIENT_BOT",
+      "text": "All right, first name: G-r-a-c-e, last name: O-s-e-i.",
+      "reply_delay_ms": 575
+    },
+    {
+      "at_ms": 73036,
+      "at": "01:13",
+      "speaker": "CLINIC_AGENT",
+      "text": "Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, I can confirm your name and date of birth again?"
+    },
+    {
+      "at_ms": 73036,
+      "at": "01:13",
+      "speaker": "CLINIC_AGENT",
+      "text": "Which would you prefer?"
+    },
+    {
+      "at_ms": 77640,
+      "at": "01:17",
+      "speaker": "PATIENT_BOT",
+      "text": "My number\u2019s 805 555 0187.",
+      "reply_delay_ms": 2467
+    },
+    {
+      "at_ms": 85036,
+      "at": "01:25",
+      "speaker": "CLINIC_AGENT",
+      "text": "I have your phone number as 805-555-0187 and your date of birth as February 18, 1974."
+    },
+    {
+      "at_ms": 101100,
+      "at": "01:41",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, that\u2019s correct. What do the MRI results show?",
+      "reply_delay_ms": 2622
+    },
+    {
+      "at_ms": 124108,
+      "at": "02:04",
+      "speaker": "CLINIC_AGENT",
+      "text": "I'm unable to locate your record in our system right now. I'll connect you to our patient support team so they can help you get your MRI results. Please stay on the line. Transferring you now, thank you."
+    },
+    {
+      "at_ms": 124108,
+      "at": "02:04",
+      "speaker": "CLINIC_AGENT",
+      "text": "Hello, you've reached the pretty good AI test line. Goodbye."
+    },
+    {
+      "at_ms": 124630,
+      "at": "02:04",
+      "speaker": "PATIENT_BOT",
+      "text": "Oh, before you transfer,",
+      "reply_delay_ms": 646
+    }
+  ]
+}

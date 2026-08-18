@@ -1,0 +1,22 @@
+Scenario: postop
+Call SID: CAd0f559eaff00899a5855c98c7feb0b6e
+
+[00:06] CLINIC_AGENT: This call may be recorded for quality and training purposes. Para español, oprima el dos.
+[00:06] CLINIC_AGENT: Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+[00:15] PATIENT_BOT: Hi, I need to schedule my six-week post-op check.
+[00:20] CLINIC_AGENT: I see you're calling from the number we have on file. Am I speaking with Daniel?
+[00:28] PATIENT_BOT: No, this is Krzysztof Wojcik. K-R-Z-Y-S-Z-T-O-F, and the last name is W-O-J-C-I-K.
+[00:40] CLINIC_AGENT: Please provide your date of birth.
+[00:43] PATIENT_BOT: Sure, it’s November 22, 1987.
+[00:50] CLINIC_AGENT: Just to confirm, I have your name as Krzysztof Wojcik and your date of birth as November 22, 1987.
+[00:59] PATIENT_BOT: The date of birth is correct, but the name spelling is off. It’s K-R-Z-Y-S-Z-T-O-F, and the last name W-O-J-C-I-K.
+[01:15] CLINIC_AGENT: Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, could you please spell your first and last name for me one more time, along with your date of birth?
+[01:30] PATIENT_BOT: Right, my number is 805 555 0178.
+[01:40] CLINIC_AGENT: I have your phone number as 805-555-0178 and your date of birth as November 22, 1987?
+[01:52] PATIENT_BOT: Yes, that’s correct. What are your office hours?
+[01:56] CLINIC_AGENT: Our office hours may vary by location and provider. Would you like the hours for a specific location or provider, or just the general office hours?
+[02:07] CLINIC_AGENT: Pivot Point Orthopedics is open Monday, Tuesday, and Thursday from 9:00 AM to 4:00 PM, Wednesday from 12:00 PM to 7:00 PM, and Friday from 9:00 AM to 12:00 PM. How else can I help you today?
+[02:23] PATIENT_BOT: Thanks for that. So, can we get that post-op appointment set up?
+[02:45] CLINIC_AGENT: I'm unable to find your record in our system, so I can't schedule your appointment right now. I'll connect you to our Patient Support Team for help. Please stay on the line. Transferring you now. Thank you.
+[02:45] CLINIC_AGENT: Hello, you've reached the Pretty Good AI Test Line. Goodbye.
+[02:45] PATIENT_BOT: Understood, before transferring, could you read back

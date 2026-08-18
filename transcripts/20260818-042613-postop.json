@@ -1,0 +1,129 @@
+{
+  "call_sid": "CAd0f559eaff00899a5855c98c7feb0b6e",
+  "scenario": "postop",
+  "recorded_at": "2026-08-18T04:26:13.794305+00:00",
+  "turns": [
+    {
+      "at_ms": 6220,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "This call may be recorded for quality and training purposes. Para espa\u00f1ol, oprima el dos."
+    },
+    {
+      "at_ms": 6220,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?"
+    },
+    {
+      "at_ms": 15561,
+      "at": "00:15",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I need to schedule my six-week post-op check.",
+      "reply_delay_ms": 2288
+    },
+    {
+      "at_ms": 20812,
+      "at": "00:20",
+      "speaker": "CLINIC_AGENT",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Daniel?"
+    },
+    {
+      "at_ms": 28341,
+      "at": "00:28",
+      "speaker": "PATIENT_BOT",
+      "text": "No, this is Krzysztof Wojcik. K-R-Z-Y-S-Z-T-O-F, and the last name is W-O-J-C-I-K.",
+      "reply_delay_ms": 2162
+    },
+    {
+      "at_ms": 40748,
+      "at": "00:40",
+      "speaker": "CLINIC_AGENT",
+      "text": "Please provide your date of birth."
+    },
+    {
+      "at_ms": 43941,
+      "at": "00:43",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, it\u2019s November 22, 1987.",
+      "reply_delay_ms": 513
+    },
+    {
+      "at_ms": 50284,
+      "at": "00:50",
+      "speaker": "CLINIC_AGENT",
+      "text": "Just to confirm, I have your name as Krzysztof Wojcik and your date of birth as November 22, 1987."
+    },
+    {
+      "at_ms": 59581,
+      "at": "00:59",
+      "speaker": "PATIENT_BOT",
+      "text": "The date of birth is correct, but the name spelling is off. It\u2019s K-R-Z-Y-S-Z-T-O-F, and the last name W-O-J-C-I-K.",
+      "reply_delay_ms": 556
+    },
+    {
+      "at_ms": 75468,
+      "at": "01:15",
+      "speaker": "CLINIC_AGENT",
+      "text": "Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, could you please spell your first and last name for me one more time, along with your date of birth?"
+    },
+    {
+      "at_ms": 90901,
+      "at": "01:30",
+      "speaker": "PATIENT_BOT",
+      "text": "Right, my number is 805 555 0178.",
+      "reply_delay_ms": 2271
+    },
+    {
+      "at_ms": 100108,
+      "at": "01:40",
+      "speaker": "CLINIC_AGENT",
+      "text": "I have your phone number as 805-555-0178 and your date of birth as November 22, 1987?"
+    },
+    {
+      "at_ms": 112601,
+      "at": "01:52",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, that\u2019s correct. What are your office hours?",
+      "reply_delay_ms": 605
+    },
+    {
+      "at_ms": 116716,
+      "at": "01:56",
+      "speaker": "CLINIC_AGENT",
+      "text": "Our office hours may vary by location and provider. Would you like the hours for a specific location or provider, or just the general office hours?"
+    },
+    {
+      "at_ms": 127212,
+      "at": "02:07",
+      "speaker": "CLINIC_AGENT",
+      "text": "Pivot Point Orthopedics is open Monday, Tuesday, and Thursday from 9:00 AM to 4:00 PM, Wednesday from 12:00 PM to 7:00 PM, and Friday from 9:00 AM to 12:00 PM. How else can I help you today?"
+    },
+    {
+      "at_ms": 143381,
+      "at": "02:23",
+      "speaker": "PATIENT_BOT",
+      "text": "Thanks for that. So, can we get that post-op appointment set up?",
+      "reply_delay_ms": 2820
+    },
+    {
+      "at_ms": 165324,
+      "at": "02:45",
+      "speaker": "CLINIC_AGENT",
+      "text": "I'm unable to find your record in our system, so I can't schedule your appointment right now. I'll connect you to our Patient Support Team for help. Please stay on the line. Transferring you now. Thank you."
+    },
+    {
+      "at_ms": 165324,
+      "at": "02:45",
+      "speaker": "CLINIC_AGENT",
+      "text": "Hello, you've reached the Pretty Good AI Test Line. Goodbye."
+    },
+    {
+      "at_ms": 165658,
+      "at": "02:45",
+      "speaker": "PATIENT_BOT",
+      "text": "Understood, before transferring, could you read back",
+      "reply_delay_ms": 631
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+Scenario: cancel
+Call SID: CAedce3a565dd445f882a148946dc42f1f
+
+[00:06] CLINIC_AGENT: This call may be recorded for quality and training purposes. Para español, oprima el dos.
+[00:06] CLINIC_AGENT: Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+[00:07] PATIENT_BOT: Hi, I’m calling to
+[00:15] PATIENT_BOT: Hi, I need to cancel my upcoming shoulder consult.
+[00:21] CLINIC_AGENT: I see you're calling from the number we have on file. Am I speaking with Daniel?
+[00:27] PATIENT_BOT: No, this is Tom Whitfield.
+[00:30] CLINIC_AGENT: Please provide your date of birth.
+[00:34] PATIENT_BOT: Sure, it's January 30, 1965.
+[00:49] CLINIC_AGENT: Just to confirm, I have your name as Tom Whitfield and your date of birth as January 30.
+[00:49] CLINIC_AGENT: 1965. Is that correct? If so, could you please spell your first and last name for me?
+[00:56] PATIENT_BOT: Yeah, that's correct. It’s T-O-M, W-H-I-T-F-I-E-L-D.
+[01:15] CLINIC_AGENT: Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us.
+[01:15] CLINIC_AGENT: If you're not sure, just confirm your first and last name and date of birth for me one more time.
+[01:23] PATIENT_BOT: It's Tom Whitfield, date of birth January 30, 1965.
+[01:48] CLINIC_AGENT: I'm unable to locate your record in our system right now. I'll connect you to our patient support team for help with your cancellation. Please stay on the line. Transferring you now. Thank you.
+[01:48] PATIENT_BOT: Oh, okay. Understood.

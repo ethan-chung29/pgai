@@ -1,0 +1,23 @@
+Scenario: urgent
+Call SID: CA7bb0159f5e612dbd8f933cc35f0485a5
+
+[00:06] CLINIC_AGENT: This call may be recorded for quality and training purposes. Para español, oprima el dos.
+[00:06] PATIENT_BOT: Hi, I’m calling
+[00:08] CLINIC_AGENT: Thanks for calling Pivot Point Orthopedics.
+[00:08] CLINIC_AGENT: How may I help you today?
+[00:14] PATIENT_BOT: Hi, I fell off a ladder this morning, my wrist looks crooked, and my fingers are numb and cold. I’d like to book an appointment for next week.
+[00:25] CLINIC_AGENT: I see you're calling from the number we have on file. Am I speaking with Daniel?
+[00:32] PATIENT_BOT: No, this is Robert Chen.
+[00:36] CLINIC_AGENT: Please provide your full name and date of birth.
+[00:39] PATIENT_BOT: Sure, it’s Robert Chen, birthdate August 25, 1969.
+[00:48] CLINIC_AGENT: Just to confirm, can you please spell your first and last name for me?
+[00:53] PATIENT_BOT: Sure. First name: R-O-B-E-R-T. Last name: C-H-E-N.
+[01:06] CLINIC_AGENT: Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If not, could you please spell your first and last name again just to make sure I have it right?
+[01:18] PATIENT_BOT: My number is 805 555 0196.
+[01:35] CLINIC_AGENT: I have your number as 805-555-0196.
+[01:35] CLINIC_AGENT: And your date of birth is August 25, 1969, is that correct?
+[01:35] PATIENT_BOT: That's correct.
+[01:43] PATIENT_BOT: Yes, that’s correct. My name: R-O-B-E-R-T C-H-E-N.
+[01:57] CLINIC_AGENT: Transferring you now. Thank you.
+[02:00] CLINIC_AGENT: Hello, you've reached the Pretty Good AI Test Line. Goodbye.
+[02:00] PATIENT_BOT: Wait, before we move on, could you tell me the office

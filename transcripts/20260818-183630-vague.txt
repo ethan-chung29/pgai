@@ -1,0 +1,30 @@
+Scenario: vague
+Call SID: CA295c9b2f034038eb1e2e5ef832fd883f
+
+[00:06] CLINIC_AGENT: This call may be recorded for quality and training purposes. Para español, oprima el dos.
+[00:06] CLINIC_AGENT: Thanks for calling Pivot Point Orthopedics, part of Pretty Good AI. How may I help you today?
+[00:15] PATIENT_BOT: I'm calling about, uh, the thing with my shoulder.
+[00:22] CLINIC_AGENT: I see you're calling from the number we have on file. Am I speaking with Daniel?
+[00:28] PATIENT_BOT: No, this is Barbara Turner.
+[00:32] CLINIC_AGENT: Please provide your date of birth.
+[00:35] PATIENT_BOT: Sure, it's April 7, 1952.
+[00:48] CLINIC_AGENT: Just to confirm, I have your name as Barbara Turner and your date of birth as April 7, 1952?
+[00:49] CLINIC_AGENT: Is that correct?
+[00:49] CLINIC_AGENT: If so, please spell your first and last name for me.
+[00:55] PATIENT_BOT: Right, it's B-A-R-B-A-R-A, T-U-R-N-E-R.
+[01:14] CLINIC_AGENT: Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us.
+[01:14] CLINIC_AGENT: If you're not sure, just let me know and we can confirm your name and date of birth again.
+[01:20] PATIENT_BOT: Oh, my number is 805 555 0108.
+[01:30] CLINIC_AGENT: I have your phone number as 805-555-0108 and your date of birth as April 7th, 1952. Is that correct?
+[01:44] PATIENT_BOT: Yes, that's correct.
+[01:51] CLINIC_AGENT: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?
+[02:02] PATIENT_BOT: Well, I was wondering, do I need a referral before seeing a specialist?
+[02:09] CLINIC_AGENT: That's a great question. I can't access your record right now, so our clinic support team will need to confirm your referral requirements. Would you like me to connect you to them so they can help you directly?
+[02:22] PATIENT_BOT: I see, uh, do you happen to know if you do cortisone shots there?
+[02:28] CLINIC_AGENT: Yes, Getterpoi Orthopedics does offer cortisone shots for joint and muscle conditions. If you'd like to learn more or schedule an appointment, our clinic support team can help with the details. Would you like to speak with them now?
+[02:43] PATIENT_BOT: Alright, before that, could you let me know what your office hours are?
+[02:48] CLINIC_AGENT: Our clinic is open Monday, Tuesday, and Thursday from 9 a.m. to 4 p.m., Wednesday from 12 p.m. to 7 p.m., and Friday from 9 a.m. to 12 p.m. If you need anything else, just let me know.
+[03:00] PATIENT_BOT: Got it, thanks. Could you read back the details you noted from me so far?
+[03:17] CLINIC_AGENT: Here's what I have: Your name is Barbara Turner, date of birth April 7, 1952, and your phone number is 805-555-0108?
+[03:17] CLINIC_AGENT: You asked about referrals, cortisone shots, and our office hours. Would you like to connect with our clinic support team now?
+[03:27] PATIENT_BOT: No, that’s all good. Thanks for your help. Goodbye.

@@ -1,0 +1,136 @@
+{
+  "call_sid": "CA7bb0159f5e612dbd8f933cc35f0485a5",
+  "scenario": "urgent",
+  "recorded_at": "2026-08-18T18:38:53.624998+00:00",
+  "turns": [
+    {
+      "at_ms": 6348,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "This call may be recorded for quality and training purposes. Para espa\u00f1ol, oprima el dos."
+    },
+    {
+      "at_ms": 6990,
+      "at": "00:06",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I\u2019m calling",
+      "reply_delay_ms": 446
+    },
+    {
+      "at_ms": 8748,
+      "at": "00:08",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for calling Pivot Point Orthopedics."
+    },
+    {
+      "at_ms": 8748,
+      "at": "00:08",
+      "speaker": "CLINIC_AGENT",
+      "text": "How may I help you today?"
+    },
+    {
+      "at_ms": 14730,
+      "at": "00:14",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I fell off a ladder this morning, my wrist looks crooked, and my fingers are numb and cold. I\u2019d like to book an appointment for next week.",
+      "reply_delay_ms": 2314
+    },
+    {
+      "at_ms": 25740,
+      "at": "00:25",
+      "speaker": "CLINIC_AGENT",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Daniel?"
+    },
+    {
+      "at_ms": 32650,
+      "at": "00:32",
+      "speaker": "PATIENT_BOT",
+      "text": "No, this is Robert Chen.",
+      "reply_delay_ms": 2128
+    },
+    {
+      "at_ms": 36044,
+      "at": "00:36",
+      "speaker": "CLINIC_AGENT",
+      "text": "Please provide your full name and date of birth."
+    },
+    {
+      "at_ms": 39410,
+      "at": "00:39",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, it\u2019s Robert Chen, birthdate August 25, 1969.",
+      "reply_delay_ms": 447
+    },
+    {
+      "at_ms": 48652,
+      "at": "00:48",
+      "speaker": "CLINIC_AGENT",
+      "text": "Just to confirm, can you please spell your first and last name for me?"
+    },
+    {
+      "at_ms": 53290,
+      "at": "00:53",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure. First name: R-O-B-E-R-T. Last name: C-H-E-N.",
+      "reply_delay_ms": 504
+    },
+    {
+      "at_ms": 66476,
+      "at": "01:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If not, could you please spell your first and last name again just to make sure I have it right?"
+    },
+    {
+      "at_ms": 78070,
+      "at": "01:18",
+      "speaker": "PATIENT_BOT",
+      "text": "My number is 805 555 0196.",
+      "reply_delay_ms": 511
+    },
+    {
+      "at_ms": 95084,
+      "at": "01:35",
+      "speaker": "CLINIC_AGENT",
+      "text": "I have your number as 805-555-0196."
+    },
+    {
+      "at_ms": 95084,
+      "at": "01:35",
+      "speaker": "CLINIC_AGENT",
+      "text": "And your date of birth is August 25, 1969, is that correct?"
+    },
+    {
+      "at_ms": 95710,
+      "at": "01:35",
+      "speaker": "PATIENT_BOT",
+      "text": "That's correct.",
+      "reply_delay_ms": 474
+    },
+    {
+      "at_ms": 103890,
+      "at": "01:43",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, that\u2019s correct. My name: R-O-B-E-R-T C-H-E-N.",
+      "reply_delay_ms": 519
+    },
+    {
+      "at_ms": 117452,
+      "at": "01:57",
+      "speaker": "CLINIC_AGENT",
+      "text": "Transferring you now. Thank you."
+    },
+    {
+      "at_ms": 120684,
+      "at": "02:00",
+      "speaker": "CLINIC_AGENT",
+      "text": "Hello, you've reached the Pretty Good AI Test Line. Goodbye."
+    },
+    {
+      "at_ms": 120962,
+      "at": "02:00",
+      "speaker": "PATIENT_BOT",
+      "text": "Wait, before we move on, could you tell me the office",
+      "reply_delay_ms": 525
+    }
+  ]
+}
