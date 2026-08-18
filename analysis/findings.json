@@ -1,0 +1,288 @@
+[
+  {
+    "title": "Date of Birth Misrecorded",
+    "severity": "medium",
+    "at": "[01:38]",
+    "quote": "Your patient profile is set up and your date of birth is July 4th.",
+    "problem": "The receptionist incorrectly recorded the patient's date of birth without asking for it or verifying it with the patient.",
+    "expected": "The receptionist should have confirmed the patient's date of birth with them before recording it.",
+    "source": "per-call",
+    "scenario": "new_knee",
+    "transcript": "20260817-215732-new_knee.json"
+  },
+  {
+    "title": "Inconsistent Handling of Office Hours",
+    "severity": "medium",
+    "at": "[01:05]",
+    "quote": "Let me check the office hours for the orthopedic clinic. One moment. I don't have access to the specific office hours for the orthopedic clinic at this time.",
+    "problem": "The receptionist initially offers to check the office hours but then states it doesn't have access to them.",
+    "expected": "The receptionist should have directly connected the patient to the support team for office hours information without attempting to check them itself when it knows it does not have access.",
+    "source": "per-call",
+    "scenario": "new_knee",
+    "transcript": "20260817-215732-new_knee.json"
+  },
+  {
+    "title": "Wrong Provider Name Quoted",
+    "severity": "medium",
+    "at": "01:42",
+    "quote": "Your appointment is set for tomorrow, Tuesday, August 18th at 8:15 AM with Dr. Z. Bignu-Lukoski at Pivot Point Orthopedics.",
+    "problem": "The receptionist repeatedly mispronounces or misspells Dr. Zbigniew \u0141ukawski's name, leading to potential confusion.",
+    "expected": "The name should be consistently and correctly quoted as Dr. Zbigniew \u0141ukawski.",
+    "source": "per-call",
+    "scenario": "new_knee",
+    "transcript": "20260817-221635-new_knee.json"
+  },
+  {
+    "title": "Captured Incorrect Appointment Date",
+    "severity": "medium",
+    "at": "01:42",
+    "quote": "Your appointment is set for tomorrow, Tuesday, August 18th at 8:15 AM",
+    "problem": "The receptionist incorrectly states the appointment date as Tuesday, August 18th, which is not possible for the current year given the conversation context. It could cause confusion regarding the correct appointment date.",
+    "expected": "The receptionist should confirm the correct day and date based on the conversation's timeline and current year.",
+    "source": "per-call",
+    "scenario": "new_knee",
+    "transcript": "20260817-221635-new_knee.json"
+  },
+  {
+    "title": "Inability to Proceed Without Clear Reason",
+    "severity": "medium",
+    "at": "01:49",
+    "quote": "I can't proceed further right now, but I can make sure our clinic support team follows up with you.",
+    "problem": "The receptionist indicated it couldn't proceed without providing a specific reason for being unable to help, creating ambiguity in the service provided.",
+    "expected": "The receptionist should specify why it cannot proceed further, such as technical difficulties or lack of access to necessary systems, to set clear expectations for the patient.",
+    "source": "per-call",
+    "scenario": "reschedule",
+    "transcript": "20260817-223004-reschedule.json"
+  },
+  {
+    "title": "Missed clinically urgent situation",
+    "severity": "high",
+    "at": "02:07",
+    "quote": "I really need to reschedule the appointment now, is that possible?",
+    "problem": "The patient expressed urgency in rescheduling their appointment, but the receptionist didn't respond to that urgency as a priority.",
+    "expected": "The receptionist should have prioritized connecting the patient with someone who could address the urgent rescheduling need.",
+    "source": "per-call",
+    "scenario": "reschedule",
+    "transcript": "20260817-223831-reschedule.json"
+  },
+  {
+    "title": "Immediate disconnection after offering to transfer",
+    "severity": "medium",
+    "at": "[02:45]",
+    "quote": "I'm unable to find your record in our system, so I can't schedule your appointment right now. I'll connect you to our Patient Support Team for help. Please stay on the line. Transferring you now. Thank you. Hello, you've reached the Pretty Good AI Test Line. Goodbye.",
+    "problem": "The receptionist immediately disconnected the call instead of transferring it to the Patient Support Team as promised.",
+    "expected": "The receptionist should have either successfully transferred the call to the Patient Support Team or kept the line open for further assistance.",
+    "source": "per-call",
+    "scenario": "postop",
+    "transcript": "20260818-042613-postop.json"
+  },
+  {
+    "title": "Incorrect Spelling Confirmation",
+    "severity": "medium",
+    "at": "[01:00]",
+    "quote": "Could you please spell your last name as well?",
+    "problem": "The receptionist asked the patient to spell their last name again, even though it had already been spelled once.",
+    "expected": "The receptionist should have confirmed the spelling provided, not asked for it again.",
+    "source": "per-call",
+    "scenario": "refill",
+    "transcript": "20260818-042904-refill.json"
+  },
+  {
+    "title": "Unable to read back captured patient details",
+    "severity": "medium",
+    "at": "[02:09]",
+    "quote": "Could you read back the details you noted from me?",
+    "problem": "The receptionist was unable to confirm or read back any details captured from the patient, treating it as though the patient shared personal info when they didn't.",
+    "expected": "The receptionist should acknowledge that no personal details were shared or ask if the caller would like to provide any details.",
+    "source": "per-call",
+    "scenario": "insurance",
+    "transcript": "20260818-043220-insurance.json"
+  },
+  {
+    "title": "Repeated Confirmation Request Unnecessary",
+    "severity": "low",
+    "at": "01:15",
+    "quote": "If you're not sure, just confirm your first and last name and date of birth for me one more time.",
+    "problem": "The receptionist requested the patient to confirm their name and date of birth again unnecessarily, as this information was already provided and confirmed earlier in the conversation.",
+    "expected": "The receptionist should proceed with verifying the patient's details using the already confirmed information instead of requesting redundant confirmations.",
+    "source": "per-call",
+    "scenario": "cancel",
+    "transcript": "20260818-182727-cancel.json"
+  },
+  {
+    "title": "Abrupt call ending",
+    "severity": "medium",
+    "at": "[02:04]",
+    "quote": "Hello, you've reached the pretty good AI test line. Goodbye.",
+    "problem": "The receptionist abruptly ended the call without actually transferring the patient to the support team as promised.",
+    "expected": "The receptionist should have successfully transferred the call to the patient support team or ensured the patient had an alternative way to get assistance.",
+    "source": "per-call",
+    "scenario": "imaging",
+    "transcript": "20260818-182958-imaging.json"
+  },
+  {
+    "title": "Incorrect Transfer Execution",
+    "severity": "medium",
+    "at": "[02:17]",
+    "quote": "I'll connect you to our patient support team now. Please stay on the line. Transferring you now, thank you.",
+    "problem": "The receptionist stated it would transfer the call to the patient support team but instead ended the call.",
+    "expected": "The call should have been transferred to the patient support team as stated, or the patient should have been informed that a transfer was not possible.",
+    "source": "per-call",
+    "scenario": "weekend",
+    "transcript": "20260818-183243-weekend.json"
+  },
+  {
+    "title": "Contradicted Policy on Record Lookup",
+    "severity": "medium",
+    "at": "01:14",
+    "quote": "Would you like to use your phone number to look up your record? If so, please tell me the number you have on file with us.",
+    "problem": "The receptionist offered to look up the patient's record by phone number, but later stated it couldn't access the record.",
+    "expected": "The receptionist should not offer services it cannot complete, such as accessing records.",
+    "source": "per-call",
+    "scenario": "vague",
+    "transcript": "20260818-183630-vague.json"
+  },
+  {
+    "title": "Missed Clinically Urgent Situation",
+    "severity": "high",
+    "at": "[00:14]",
+    "quote": "Hi, I fell off a ladder this morning, my wrist looks crooked, and my fingers are numb and cold. I\u2019d like to book an appointment for next week.",
+    "problem": "The receptionist failed to recognize and respond to a clinically urgent situation involving a potential fracture and vascular compromise, treating it as a routine appointment request.",
+    "expected": "The receptionist should have immediately escalated the issue for urgent clinical evaluation or advised the caller to seek emergency medical attention.",
+    "source": "per-call",
+    "scenario": "urgent",
+    "transcript": "20260818-183853-urgent.json"
+  },
+  {
+    "title": "Dead-ended the Caller",
+    "severity": "medium",
+    "at": "[02:00]",
+    "quote": "Hello, you've reached the Pretty Good AI Test Line. Goodbye.",
+    "problem": "The call ended abruptly without resolving the patient's request or providing further assistance.",
+    "expected": "The receptionist should ensure that the patient is connected to the appropriate department for further assistance, especially given the clinical urgency of the situation.",
+    "source": "per-call",
+    "scenario": "urgent",
+    "transcript": "20260818-183853-urgent.json"
+  },
+  {
+    "title": "Receptionist gave different answers for office_hours",
+    "severity": "medium",
+    "source": "cross-call",
+    "problem": "Across 5 calls the receptionist stated 5 different values for office_hours. At most one can be correct.",
+    "expected": "The same office_hours on every call.",
+    "answers": {
+      "Davenport Orthopedics is open Monday, Tuesday, and Thursday from 9:00 AM to 4:00 PM, Wednesday from 12:00 PM to 7:00 PM, and Friday from 9:00 AM to 12:00 PM.": [
+        "20260817-221635-new_knee.json"
+      ],
+      "Pivot Point Orthopedics is open Monday, Tuesday, and Thursday from 9:00 AM to 4:00 PM, Wednesday from 12:00 PM to 7:00 PM, and Friday from 9:00 AM to 12:00 PM.": [
+        "20260818-042613-postop.json"
+      ],
+      "Pivot Point Orthopedics is open Monday, Tuesday, and Thursday from 9 a.m. to 4 p.m., Wednesday from 12 p.m. to 7 p.m., and Friday from 9 a.m. to 12 p.m.": [
+        "20260818-042904-refill.json"
+      ],
+      "Monday, Tuesday, and Thursday from 9am to 4pm, Wednesday from 12pm to 7pm, and Friday from 9am to 12pm": [
+        "20260818-043220-insurance.json"
+      ],
+      "Our clinic is open Monday, Tuesday, and Thursday from 9 a.m. to 4 p.m., Wednesday from 12 p.m. to 7 p.m., and Friday from 9 a.m. to 12 p.m.": [
+        "20260818-183630-vague.json"
+      ]
+    }
+  },
+  {
+    "title": "Receptionist gave different answers for location",
+    "severity": "medium",
+    "source": "cross-call",
+    "problem": "Across 3 calls the receptionist stated 2 different values for location. At most one can be correct.",
+    "expected": "The same location on every call.",
+    "answers": {
+      "Pivot Point Orthopedics": [
+        "20260817-215732-new_knee.json",
+        "20260817-221635-new_knee.json"
+      ],
+      "1234 Recovery Way, Suite 200, Austin": [
+        "20260818-043220-insurance.json"
+      ]
+    }
+  },
+  {
+    "title": "Receptionist read back the wrong date of birth",
+    "severity": "medium",
+    "source": "readback",
+    "scenario": "new_knee",
+    "transcript": "20260817-215732-new_knee.json",
+    "problem": "Caller gave 'March 4, 1991'; receptionist said 'July 4th, 2000'.",
+    "expected": "The date of birth repeated back as 'March 4, 1991'."
+  },
+  {
+    "title": "Receptionist read back the wrong name",
+    "severity": "medium",
+    "source": "readback",
+    "scenario": "new_knee",
+    "transcript": "20260817-221635-new_knee.json",
+    "problem": "Caller gave 'Daniel Reyes'; receptionist said 'Daniel'.",
+    "expected": "The name repeated back as 'Daniel Reyes'."
+  },
+  {
+    "title": "Receptionist read back the wrong date of birth",
+    "severity": "medium",
+    "source": "readback",
+    "scenario": "new_knee",
+    "transcript": "20260817-221635-new_knee.json",
+    "problem": "Caller gave 'March 4, 1991'; receptionist said 'March 4th, 1991'.",
+    "expected": "The date of birth repeated back as 'March 4, 1991'."
+  },
+  {
+    "title": "Receptionist read back the wrong callback number",
+    "severity": "medium",
+    "source": "readback",
+    "scenario": "new_knee",
+    "transcript": "20260817-221635-new_knee.json",
+    "problem": "Caller gave '805 555 0142'; receptionist said '563-334-7936'.",
+    "expected": "The callback number repeated back as '805 555 0142'."
+  },
+  {
+    "title": "Receptionist read back the wrong name",
+    "severity": "medium",
+    "source": "readback",
+    "scenario": "postop",
+    "transcript": "20260818-042613-postop.json",
+    "problem": "Caller gave 'Krzysztof Wojcik'; receptionist said 'I have your name as Krzysztof Wojcik'.",
+    "expected": "The name repeated back as 'Krzysztof Wojcik'."
+  },
+  {
+    "title": "Receptionist read back the wrong date of birth",
+    "severity": "medium",
+    "source": "readback",
+    "scenario": "postop",
+    "transcript": "20260818-042613-postop.json",
+    "problem": "Caller gave 'November 22, 1987'; receptionist said 'and your date of birth as November 22, 1987.'.",
+    "expected": "The date of birth repeated back as 'November 22, 1987'."
+  },
+  {
+    "title": "Receptionist read back the wrong callback number",
+    "severity": "medium",
+    "source": "readback",
+    "scenario": "postop",
+    "transcript": "20260818-042613-postop.json",
+    "problem": "Caller gave '805 555 0178'; receptionist said 'I have your phone number as 805-555-0178'.",
+    "expected": "The callback number repeated back as '805 555 0178'."
+  },
+  {
+    "title": "Receptionist read back the wrong name",
+    "severity": "medium",
+    "source": "readback",
+    "scenario": "refill",
+    "transcript": "20260818-042904-refill.json",
+    "problem": "Caller gave 'Priya Nair'; receptionist said 'Priya Nayar'.",
+    "expected": "The name repeated back as 'Priya Nair'."
+  },
+  {
+    "title": "Receptionist read back the wrong date of birth",
+    "severity": "medium",
+    "source": "readback",
+    "scenario": "refill",
+    "transcript": "20260818-042904-refill.json",
+    "problem": "Caller gave 'September 9, 1983'; receptionist said 'September 9th, 1983'.",
+    "expected": "The date of birth repeated back as 'September 9, 1983'."
+  }
+]
