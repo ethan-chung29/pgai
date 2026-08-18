@@ -5,8 +5,8 @@ patient, records and transcribes both sides, and surfaces bugs in the clinic's A
 receptionist.
 
 Twilio places the call and streams the audio to a local bridge, which relays it to the
-OpenAI Realtime API playing the patient. See [ARCHITECTURE.md](ARCHITECTURE.md) for why it
-is built this way.
+OpenAI Realtime API playing the patient. [ARCHITECTURE.md](ARCHITECTURE.md) covers why it is
+built this way; [WALKTHROUGH.md](WALKTHROUGH.md) walks through a call end to end.
 
 ## Setup
 
