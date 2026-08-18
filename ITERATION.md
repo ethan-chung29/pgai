@@ -9,15 +9,15 @@ tooling were finished.
 
 | # | Found by | Problem | Change | Effect |
 | --- | --- | --- | --- | --- |
-| 1 | Terminal error, first call attempt | `CERTIFICATE_VERIFY_FAILED`, call died mid-connection | Pin the TLS context to certifi (`add19e8`) | First successful call |
-| 2 | Listening to call 1 | Sounded robotic; opened by demanding office hours | Persona rewrite, better voices, semantic VAD, better transcription (`22d4695`) | Call 2 flowed naturally and caught a real bug itself |
-| 3 | Watching call 2 run long | Hit the 300s cost cap chasing a correction | Wrap up once the goal is met (`35cba23`) | Calls now end at 2–3 min via the model's own hang-up |
-| 4 | Listening to call 2 | Female voice playing a male patient | Match voice to persona; correct a wrong-name greeting (`db09a78`) | Voice and persona coherent; identity held across all later calls |
-| 5 | Reading call 3's transcript | The barge-in test never fired | Let a scenario override the turn-taking rule (`417a161`) | Interruption attempted in call 4 |
-| 6 | Noticing missing MP3s | `main.py` crashed right after dialling | Fix the crash; name recordings after transcripts; add `fetch` (`7e4c628`) | Audio downloads automatically and pairs with its transcript |
-| 7 | Reading call 4's transcript | Bot answered the Spanish notice in Spanish | Name the recording explicitly in the persona (`e629135`) | Clean English openings afterwards |
-| 8 | Listening to calls 3–4 | Long pause before every reply | Instrument the delay, raise VAD eagerness (`e9c3fb7`) | **~1.5s average reply delay, measured** |
-| 9 | Reviewing `analyze.py` output | False positives in the findings | Canonicalise extracted values before diffing (`5ae621a`) | 26 candidates → 20, survivors all real |
+| 1 | Terminal error, first call attempt | `CERTIFICATE_VERIFY_FAILED`, call died mid-connection | Pin the TLS context to certifi | First successful call |
+| 2 | Listening to call 1 | Sounded robotic; opened by demanding office hours | Persona rewrite, better voices, semantic VAD, better transcription | Call 2 flowed naturally and caught a real bug itself |
+| 3 | Watching call 2 run long | Hit the 300s cost cap chasing a correction | Wrap up once the goal is met | Calls now end at 2–3 min via the model's own hang-up |
+| 4 | Listening to call 2 | Female voice playing a male patient | Match voice to persona; correct a wrong-name greeting | Voice and persona coherent; identity held across all later calls |
+| 5 | Reading call 3's transcript | The barge-in test never fired | Let a scenario override the turn-taking rule | Interruption attempted in call 4 |
+| 6 | Noticing missing MP3s | `main.py` crashed right after dialling | Fix the crash; name recordings after transcripts; add `fetch` | Audio downloads automatically and pairs with its transcript |
+| 7 | Reading call 4's transcript | Bot answered the Spanish notice in Spanish | Name the recording explicitly in the persona | Clean English openings afterwards |
+| 8 | Listening to calls 3–4 | Long pause before every reply | Instrument the delay, raise VAD eagerness | **~1.5s average reply delay, measured** |
+| 9 | Reviewing `analyze.py` output | False positives in the findings | Canonicalise extracted values before diffing | 26 candidates → 20, survivors all real |
 
 ---
 

@@ -198,11 +198,10 @@ Never a yes or a no. For a prospective patient choosing a clinic, this is the qu
 
 ## Checked and not reported
 
-**Two apparent wrong-practice-name bugs were rejected on listening.** The transcripts show
-the agent saying "Davenport Orthopedics" (`20260817-221635-new_knee` `[02:47]`) and
-"Getterpoi Orthopedics" (`20260818-183630-vague` `[02:28]`). The audio says **"Pivot Point
-Orthopedics"** in both cases. These are speech-recognition errors on 8kHz phone audio, not
-anything the agent said, and reporting them would have been a false accusation.
+**Two apparent wrong-practice-name bugs were rejected on listening.** In both cases the
+transcript rendered the clinic's name incorrectly and the audio was correct — speech
+recognition errors on 8kHz phone audio, not anything the agent said. Reporting them would
+have been a false accusation.
 
 **An appointment "scheduled on a non-existent date" was rejected on checking.** The agent
 said *"tomorrow, Tuesday, August 18th"* on a call placed Monday 17 August 2026. 18 August
