@@ -1,0 +1,115 @@
+{
+  "call_sid": "CA57d300b5e3924b902f661284eab6e014",
+  "scenario": "reschedule",
+  "recorded_at": "2026-08-17T22:30:04.456485+00:00",
+  "turns": [
+    {
+      "at_ms": 6380,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "This call may be recorded for quality and training purposes. Para espa\u00f1ol, oprima el dos."
+    },
+    {
+      "at_ms": 10636,
+      "at": "00:10",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for calling Pivot Point Orthopedics."
+    },
+    {
+      "at_ms": 10636,
+      "at": "00:10",
+      "speaker": "CLINIC_AGENT",
+      "text": "How may I help you today?"
+    },
+    {
+      "at_ms": 16784,
+      "at": "00:16",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I need to reschedule my physical therapy appointment this week."
+    },
+    {
+      "at_ms": 25868,
+      "at": "00:25",
+      "speaker": "CLINIC_AGENT",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Daniel?"
+    },
+    {
+      "at_ms": 31324,
+      "at": "00:31",
+      "speaker": "PATIENT_BOT",
+      "text": "No, this is Maria Alvarez."
+    },
+    {
+      "at_ms": 34796,
+      "at": "00:34",
+      "speaker": "CLINIC_AGENT",
+      "text": "Please provide your full date of birth."
+    },
+    {
+      "at_ms": 37904,
+      "at": "00:37",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, it\u2019s July 15, 1979."
+    },
+    {
+      "at_ms": 44172,
+      "at": "00:44",
+      "speaker": "CLINIC_AGENT",
+      "text": "Just to confirm, I have your name as Maria Alvarez and your date of birth as July 15, 1979. Is that correct?"
+    },
+    {
+      "at_ms": 56064,
+      "at": "00:56",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, that\u2019s correct."
+    },
+    {
+      "at_ms": 60748,
+      "at": "01:00",
+      "speaker": "CLINIC_AGENT",
+      "text": "Would you like to use your phone number to look up your record? If so, please provide the number you have on file with us. If you're not sure, I can confirm your name and date of birth again. Which would you prefer?"
+    },
+    {
+      "at_ms": 76464,
+      "at": "01:16",
+      "speaker": "PATIENT_BOT",
+      "text": "My number on file should be 805 555 0163."
+    },
+    {
+      "at_ms": 87180,
+      "at": "01:27",
+      "speaker": "CLINIC_AGENT",
+      "text": "I have your phone number as 805-555-0163 and your date of birth as July 15, 1979. Is that correct?"
+    },
+    {
+      "at_ms": 102964,
+      "at": "01:42",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, that\u2019s right."
+    },
+    {
+      "at_ms": 109676,
+      "at": "01:49",
+      "speaker": "CLINIC_AGENT",
+      "text": "I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?"
+    },
+    {
+      "at_ms": 121524,
+      "at": "02:01",
+      "speaker": "PATIENT_BOT",
+      "text": "Oh, I really need to get this done now\u2014could you help me reschedule that appointment time?"
+    },
+    {
+      "at_ms": 127852,
+      "at": "02:07",
+      "speaker": "CLINIC_AGENT",
+      "text": "I'm unable to access your record right now, so I can't reschedule the appointment myself. I can connect you to our patient support team who can help right away. Would you like me to transfer you now?"
+    },
+    {
+      "at_ms": 143024,
+      "at": "02:23",
+      "speaker": "PATIENT_BOT",
+      "text": "Alright, if that's the only way\u2014yes, please transfer me to them."
+    }
+  ]
+}

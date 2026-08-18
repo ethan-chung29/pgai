@@ -1,0 +1,157 @@
+{
+  "call_sid": "CAad63318c4e26b96938c0ec22407018ff",
+  "scenario": "new_knee",
+  "recorded_at": "2026-08-17T21:57:32.294601+00:00",
+  "turns": [
+    {
+      "at_ms": 7694,
+      "at": "00:07",
+      "speaker": "CLINIC_AGENT",
+      "text": "Esta llamada puede ser grabada para motivos de calidad y entrenamiento."
+    },
+    {
+      "at_ms": 7794,
+      "at": "00:07",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I\u2019m calling about a knee injury. Could you tell me your office hours?"
+    },
+    {
+      "at_ms": 9614,
+      "at": "00:09",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thank you for watching."
+    },
+    {
+      "at_ms": 9994,
+      "at": "00:09",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, can you tell me your office hours?"
+    },
+    {
+      "at_ms": 13174,
+      "at": "00:13",
+      "speaker": "CLINIC_AGENT",
+      "text": "Hello, how can I help you today?"
+    },
+    {
+      "at_ms": 13894,
+      "at": "00:13",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, uh, yeah, I need to know your office hours first."
+    },
+    {
+      "at_ms": 24234,
+      "at": "00:24",
+      "speaker": "CLINIC_AGENT",
+      "text": "Sure. Could you tell me which clinic location or department you're asking about?"
+    },
+    {
+      "at_ms": 25354,
+      "at": "00:25",
+      "speaker": "PATIENT_BOT",
+      "text": "Oh, this is the orthopedic clinic, right? I\u2019m asking about that one."
+    },
+    {
+      "at_ms": 42694,
+      "at": "00:42",
+      "speaker": "PATIENT_BOT",
+      "text": "I'd really just like to know the hours. Could you check that for me before we go further?"
+    },
+    {
+      "at_ms": 43174,
+      "at": "00:43",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for clarifying. I don't have the exact office hours for the orthopedic clinic right now. Would you like me to connect you with our support team for more details?"
+    },
+    {
+      "at_ms": 64974,
+      "at": "01:04",
+      "speaker": "PATIENT_BOT",
+      "text": "Alright, if you can\u2019t find them, let\u2019s just move on. I need to get the earliest appointment you have."
+    },
+    {
+      "at_ms": 65714,
+      "at": "01:05",
+      "speaker": "CLINIC_AGENT",
+      "text": "Let me check the office hours for the orthopedic clinic. One moment. I don't have access to the specific office hours for the orthopedic clinic at this time. Would you like me to connect you with our support team so they can provide the exact hours?"
+    },
+    {
+      "at_ms": 81714,
+      "at": "01:21",
+      "speaker": "CLINIC_AGENT",
+      "text": "can help with that. Before we schedule, would you like to create a devo patient profile? I just need your first and last name to get started."
+    },
+    {
+      "at_ms": 81974,
+      "at": "01:21",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, it's Daniel Reyes."
+    },
+    {
+      "at_ms": 98614,
+      "at": "01:38",
+      "speaker": "CLINIC_AGENT",
+      "text": "Your patient profile is set up and your date of birth is July 4th."
+    },
+    {
+      "at_ms": 102394,
+      "at": "01:42",
+      "speaker": "CLINIC_AGENT",
+      "text": "2,000 for demo purposes. How can I help you today?"
+    },
+    {
+      "at_ms": 103354,
+      "at": "01:43",
+      "speaker": "PATIENT_BOT",
+      "text": "Wait, my date of birth is actually March 4, 1991, not July."
+    },
+    {
+      "at_ms": 116914,
+      "at": "01:56",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for letting me know, Daniel. What type of appointment do you need?"
+    },
+    {
+      "at_ms": 123054,
+      "at": "02:03",
+      "speaker": "CLINIC_AGENT",
+      "text": "Are you coming in for a new patient consultation, a follow-up, a routine visit, or something else?"
+    },
+    {
+      "at_ms": 124054,
+      "at": "02:04",
+      "speaker": "PATIENT_BOT",
+      "text": "It\u2019s a new patient consultation. I slipped and my right knee\u2019s swollen."
+    },
+    {
+      "at_ms": 143834,
+      "at": "02:23",
+      "speaker": "PATIENT_BOT",
+      "text": "Yeah, let\u2019s go with that. Do I need an X-ray or a referral first?"
+    },
+    {
+      "at_ms": 144134,
+      "at": "02:24",
+      "speaker": "CLINIC_AGENT",
+      "text": "We have openings for a new patient consultation with Dudi Hauser at Pivot Point Orthopedics. The earliest slot is Tuesday, August 18th at 3 p.m. Would you like to book that time?"
+    },
+    {
+      "at_ms": 171654,
+      "at": "02:51",
+      "speaker": "CLINIC_AGENT",
+      "text": "Your appointment is set for Tuesday, August 18th at 3 p.m. with Dubie Houser at Pivot Point Orthopedics. You do not need a referral or x-ray before your first visit. The provider will evaluate your knee and let you know if any imaging or further steps are needed. Please bring your photo ID, insurance card, and a list of any medications you take."
+    },
+    {
+      "at_ms": 171894,
+      "at": "02:51",
+      "speaker": "PATIENT_BOT",
+      "text": "Got it. Can you read back my details real quick, just to be sure everything's right?"
+    },
+    {
+      "at_ms": 195854,
+      "at": "03:15",
+      "speaker": "PATIENT_BOT",
+      "text": "Yep, that sounds right. Thanks for your help. Talk to you then."
+    }
+  ]
+}

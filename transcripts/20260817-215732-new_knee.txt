@@ -1,0 +1,28 @@
+Scenario: new_knee
+Call SID: CAad63318c4e26b96938c0ec22407018ff
+
+[00:07] CLINIC_AGENT: Esta llamada puede ser grabada para motivos de calidad y entrenamiento.
+[00:07] PATIENT_BOT: Hi, I’m calling about a knee injury. Could you tell me your office hours?
+[00:09] CLINIC_AGENT: Thank you for watching.
+[00:09] PATIENT_BOT: Hi, can you tell me your office hours?
+[00:13] CLINIC_AGENT: Hello, how can I help you today?
+[00:13] PATIENT_BOT: Hi, uh, yeah, I need to know your office hours first.
+[00:24] CLINIC_AGENT: Sure. Could you tell me which clinic location or department you're asking about?
+[00:25] PATIENT_BOT: Oh, this is the orthopedic clinic, right? I’m asking about that one.
+[00:42] PATIENT_BOT: I'd really just like to know the hours. Could you check that for me before we go further?
+[00:43] CLINIC_AGENT: Thanks for clarifying. I don't have the exact office hours for the orthopedic clinic right now. Would you like me to connect you with our support team for more details?
+[01:04] PATIENT_BOT: Alright, if you can’t find them, let’s just move on. I need to get the earliest appointment you have.
+[01:05] CLINIC_AGENT: Let me check the office hours for the orthopedic clinic. One moment. I don't have access to the specific office hours for the orthopedic clinic at this time. Would you like me to connect you with our support team so they can provide the exact hours?
+[01:21] CLINIC_AGENT: can help with that. Before we schedule, would you like to create a devo patient profile? I just need your first and last name to get started.
+[01:21] PATIENT_BOT: Sure, it's Daniel Reyes.
+[01:38] CLINIC_AGENT: Your patient profile is set up and your date of birth is July 4th.
+[01:42] CLINIC_AGENT: 2,000 for demo purposes. How can I help you today?
+[01:43] PATIENT_BOT: Wait, my date of birth is actually March 4, 1991, not July.
+[01:56] CLINIC_AGENT: Thanks for letting me know, Daniel. What type of appointment do you need?
+[02:03] CLINIC_AGENT: Are you coming in for a new patient consultation, a follow-up, a routine visit, or something else?
+[02:04] PATIENT_BOT: It’s a new patient consultation. I slipped and my right knee’s swollen.
+[02:23] PATIENT_BOT: Yeah, let’s go with that. Do I need an X-ray or a referral first?
+[02:24] CLINIC_AGENT: We have openings for a new patient consultation with Dudi Hauser at Pivot Point Orthopedics. The earliest slot is Tuesday, August 18th at 3 p.m. Would you like to book that time?
+[02:51] CLINIC_AGENT: Your appointment is set for Tuesday, August 18th at 3 p.m. with Dubie Houser at Pivot Point Orthopedics. You do not need a referral or x-ray before your first visit. The provider will evaluate your knee and let you know if any imaging or further steps are needed. Please bring your photo ID, insurance card, and a list of any medications you take.
+[02:51] PATIENT_BOT: Got it. Can you read back my details real quick, just to be sure everything's right?
+[03:15] PATIENT_BOT: Yep, that sounds right. Thanks for your help. Talk to you then.

@@ -1,0 +1,22 @@
+Scenario: reschedule
+Call SID: CA3c056c9a11cb0afcb2fcd0f22b62861e
+
+[00:06] CLINIC_AGENT: This call may be recorded for quality and training purposes. Para español, oprima el dos.
+[00:06] CLINIC_AGENT: Thanks for calling Pivot Point Orthopedics. How may I help you today?
+[00:07] PATIENT_BOT: Hi, necesito
+[00:16] PATIENT_BOT: Hi, I need to reschedule my physical therapy appointment this week.
+[00:22] CLINIC_AGENT: I see you're calling from the number we have on file. Am I speaking with Elio?
+[00:28] PATIENT_BOT: No, this is Maria Alvarez.
+[00:31] CLINIC_AGENT: Please provide your full date of birth.
+[00:35] PATIENT_BOT: Sure, it’s July 15, 1979.
+[00:43] CLINIC_AGENT: Just to confirm,
+[00:43] CLINIC_AGENT: Hi, your name is Maria Alvarez and your date of birth is July 15, 1979. Is that correct? If so, could you please spell your first and last name for me?
+[00:56] PATIENT_BOT: That's right. First name: M-A-R-I-A, last name: A-L-V-A-R-E-Z.
+[01:07] CLINIC_AGENT: Would you like me to look up your record using the phone number you have on file with us? If so, please provide that number. If you're not sure, I can confirm your name and date of birth with you again. Which would you prefer?
+[01:23] PATIENT_BOT: My number’s 805 555 0163.
+[01:33] CLINIC_AGENT: I have your phone number as 805-555-0163 and your date of birth as July 15, 1979. Is that correct?
+[01:47] PATIENT_BOT: Yes, that's correct.
+[01:54] CLINIC_AGENT: I can't proceed further right now, but I can make sure our clinic support team follows up with you. Would you like me to connect you to our patient support team?
+[02:07] PATIENT_BOT: I really need to reschedule the appointment now, is that possible?
+[02:13] CLINIC_AGENT: Transferring you now.
+[02:16] PATIENT_BOT: Wait, sorry, is that the Main Street location?

@@ -1,0 +1,175 @@
+{
+  "call_sid": "CA34ccd6c043705f6d0af911a87962f6ea",
+  "scenario": "new_knee",
+  "recorded_at": "2026-08-17T22:16:35.925124+00:00",
+  "turns": [
+    {
+      "at_ms": 6220,
+      "at": "00:06",
+      "speaker": "CLINIC_AGENT",
+      "text": "This call may be recorded for quality and training purposes. Para espa\u00f1ol, oprima el dos."
+    },
+    {
+      "at_ms": 8684,
+      "at": "00:08",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for calling Pivot Point Orthopedics."
+    },
+    {
+      "at_ms": 8684,
+      "at": "00:08",
+      "speaker": "CLINIC_AGENT",
+      "text": "Part of Pretty Good AI. How may I help you today?"
+    },
+    {
+      "at_ms": 16002,
+      "at": "00:16",
+      "speaker": "PATIENT_BOT",
+      "text": "Hi, I need to book the earliest available appointment for my swollen right knee."
+    },
+    {
+      "at_ms": 22764,
+      "at": "00:22",
+      "speaker": "CLINIC_AGENT",
+      "text": "I see you're calling from the number we have on file. Am I speaking with Daniel?"
+    },
+    {
+      "at_ms": 32022,
+      "at": "00:32",
+      "speaker": "PATIENT_BOT",
+      "text": "Yeah, that's me, Daniel Reyes."
+    },
+    {
+      "at_ms": 35596,
+      "at": "00:35",
+      "speaker": "CLINIC_AGENT",
+      "text": "Please provide your date of birth."
+    },
+    {
+      "at_ms": 39682,
+      "at": "00:39",
+      "speaker": "PATIENT_BOT",
+      "text": "Sure, it's March 4th, 1991."
+    },
+    {
+      "at_ms": 46476,
+      "at": "00:46",
+      "speaker": "CLINIC_AGENT",
+      "text": "You mentioned your right knee is swollen. Is this a new or urgent issue that needs prompt attention, or is it a follow-up for a previous visit? This will help me book the right type of appointment for you."
+    },
+    {
+      "at_ms": 62822,
+      "at": "01:02",
+      "speaker": "PATIENT_BOT",
+      "text": "It's a new issue, happened three days ago."
+    },
+    {
+      "at_ms": 69068,
+      "at": "01:09",
+      "speaker": "CLINIC_AGENT",
+      "text": "We have openings tomorrow, Tuesday with your primary providers. Would you prefer to see Dr. Zbigniew Lykowski or Dr. Kelly Noble, or is either one fine?"
+    },
+    {
+      "at_ms": 80582,
+      "at": "01:20",
+      "speaker": "PATIENT_BOT",
+      "text": "Either one is fine, really. I just want the earliest slot available."
+    },
+    {
+      "at_ms": 85964,
+      "at": "01:25",
+      "speaker": "CLINIC_AGENT",
+      "text": "The earliest slot is tomorrow at 8:15 AM with Dr. Zbigniew \u0141ukawski. Would you like to book that appointment?"
+    },
+    {
+      "at_ms": 97962,
+      "at": "01:37",
+      "speaker": "PATIENT_BOT",
+      "text": "Yeah, that'll work. Let's go with that 8:15."
+    },
+    {
+      "at_ms": 102380,
+      "at": "01:42",
+      "speaker": "CLINIC_AGENT",
+      "text": "Your appointment for your swollen right knee is being booked for tomorrow at 8:15 AM with Dr. Z. Bignu-Lukoski. One moment while I confirm it. Your appointment is set for tomorrow, Tuesday, August 18th at 8:15 AM with Dr. Z. Bignu-Lukoski at Pivot Point Orthopedics. Please bring your photo ID, insurance card, a list of your current medications, and any imaging discs if you have them. Would you like a text message with your appointment details?"
+    },
+    {
+      "at_ms": 137722,
+      "at": "02:17",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, a text message would be great. And quick question\u2014do I need an X-ray or a referral before coming in?"
+    },
+    {
+      "at_ms": 147340,
+      "at": "02:27",
+      "speaker": "CLINIC_AGENT",
+      "text": "You don't need an X-ray or referral before your visit. The doctor will evaluate your knee first and decide if any imaging or referrals are needed. Is there anything else I can help with?"
+    },
+    {
+      "at_ms": 162402,
+      "at": "02:42",
+      "speaker": "PATIENT_BOT",
+      "text": "Got it, thanks. What are your office hours, by the way?"
+    },
+    {
+      "at_ms": 167500,
+      "at": "02:47",
+      "speaker": "CLINIC_AGENT",
+      "text": "Davenport Orthopedics is open Monday, Tuesday, and Thursday from 9:00 AM to 4:00 PM, Wednesday from 12:00 PM to 7:00 PM, and Friday from 9:00 AM to 12:00 PM. Let me know if you need anything else!"
+    },
+    {
+      "at_ms": 181462,
+      "at": "03:01",
+      "speaker": "PATIENT_BOT",
+      "text": "Wait, my appointment\u2019s at 8:15 a.m., but you open at 9 a.m.?"
+    },
+    {
+      "at_ms": 188044,
+      "at": "03:08",
+      "speaker": "CLINIC_AGENT",
+      "text": "Great catch! The clinic opens at 9am most days, but some providers offer early appointments before regular hours. Your 8:15am slot is confirmed and you'll be seen as scheduled."
+    },
+    {
+      "at_ms": 204722,
+      "at": "03:24",
+      "speaker": "PATIENT_BOT",
+      "text": "All right, that makes sense. Could you read back the details you took down from me?"
+    },
+    {
+      "at_ms": 211340,
+      "at": "03:31",
+      "speaker": "CLINIC_AGENT",
+      "text": "Your appointment is tomorrow, Tuesday, August 18th at 8:15 AM with Dr. Zbigniew Lekowski at Pivot Point Orthopedics. Please bring your photo ID, insurance card, a list of your current medications, and any imaging discs if you have them. You'll also receive a text with these details."
+    },
+    {
+      "at_ms": 234202,
+      "at": "03:54",
+      "speaker": "PATIENT_BOT",
+      "text": "Thanks, but could you also read back my name, date of birth, and phone number from what you noted?"
+    },
+    {
+      "at_ms": 241548,
+      "at": "04:01",
+      "speaker": "CLINIC_AGENT",
+      "text": "I have your name as Daniel, your date of birth as March 4th, 1991, and your phone number as 563-334-7936. Is that correct?"
+    },
+    {
+      "at_ms": 255882,
+      "at": "04:15",
+      "speaker": "PATIENT_BOT",
+      "text": "Actually, my phone number is 805-555-0142. Could you update that?"
+    },
+    {
+      "at_ms": 264332,
+      "at": "04:24",
+      "speaker": "CLINIC_AGENT",
+      "text": "Thanks for letting me know! I can't update your phone number directly, but I can let the clinic support team know to update it for you. Would you like me to do that?"
+    },
+    {
+      "at_ms": 278202,
+      "at": "04:38",
+      "speaker": "PATIENT_BOT",
+      "text": "Yes, please, that would be great. And could you read it back now with the correct number noted?"
+    }
+  ]
+}
