@@ -14,6 +14,7 @@ Three passes:
 
 import json
 import os
+import re
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -28,6 +29,17 @@ load_dotenv()
 MODEL = os.getenv("ANALYSIS_MODEL", "gpt-4o")
 TRANSCRIPT_DIR = Path(os.getenv("TRANSCRIPT_DIR", "transcripts"))
 ANALYSIS_DIR = Path("analysis")
+
+# Fields compared across calls. The clinic name is separate from the hours so a
+# wrong practice name shows up as its own contradiction rather than as five
+# differently-worded schedules.
+CONSISTENCY_FIELDS = [
+    "practice_name",
+    "office_hours",
+    "weekend_availability",
+    "location",
+    "insurance_accepted",
+]
 
 client = OpenAI()
 
@@ -111,11 +123,28 @@ def pass_a_triage(transcripts: list[dict]) -> list[dict]:
 EXTRACT_RULES = """Extract only what the RECEPTIONIST explicitly stated in this call.
 
 Return JSON with these keys, using null for anything not stated:
-  office_hours, weekend_availability, location, insurance_accepted,
-  patient_name_readback, patient_dob_readback, patient_phone_readback
+  practice_name, office_hours, weekend_availability, location,
+  insurance_accepted, patient_name_readback, patient_dob_readback,
+  patient_phone_readback
 
-Copy what was said, condensed but not paraphrased into your own wording. If the
-receptionist never stated something, the value is null. Do not infer or guess."""
+Return the bare value and nothing else. Strip every carrier phrase: "I have your
+name as Maria Alvarez" becomes "Maria Alvarez". Never include the words the
+receptionist wrapped around the value.
+
+Normalise so that two calls saying the same thing produce identical strings:
+  practice_name    the clinic name only, e.g. "Pivot Point Orthopedics"
+  office_hours     "Mon 9:00-16:00; Tue 9:00-16:00; Wed 12:00-19:00" - 24-hour,
+                   three-letter days, ascending, semicolon separated, closed
+                   days omitted
+  location         street address only, no clinic name
+  weekend_availability   exactly "open" or "closed"
+  patient_dob_readback   "Month D, YYYY" e.g. "March 4, 1991" - matching the
+                         form the patient records use, so a comparison is fair
+  patient_phone_readback digits only, no punctuation
+  patient_name_readback  the name exactly as spoken, no normalising
+
+If the receptionist never stated something, the value is null. Never infer or
+guess a value that was not said aloud."""
 
 
 def extract_claims(transcripts: list[dict]) -> dict[str, dict]:
@@ -128,10 +157,9 @@ def extract_claims(transcripts: list[dict]) -> dict[str, dict]:
 
 def pass_b_consistency(claims: dict[str, dict]) -> list[dict]:
     """Cross-call contradictions. The LLM extracted; the diffing is plain code."""
-    fields = ["office_hours", "weekend_availability", "location", "insurance_accepted"]
     findings = []
 
-    for field in fields:
+    for field in CONSISTENCY_FIELDS:
         by_answer = defaultdict(list)
         for filename, claim in claims.items():
             value = claim.get(field)
@@ -193,17 +221,20 @@ def pass_c_readback(transcripts: list[dict], claims: dict[str, dict]) -> list[di
 
 
 def normalise(value: str) -> str:
-    """Loose match -- punctuation and casing differences aren't bugs."""
-    return "".join(c for c in str(value).lower() if c.isalnum())
+    """Loose match. Punctuation, casing, and "4th" vs "4" are not bugs -- only a
+    genuinely different value is."""
+    text = re.sub(r"(\d+)(st|nd|rd|th)\b", r"\1", str(value).lower())
+    return "".join(c for c in text if c.isalnum())
 
 
 def write_consistency_table(claims: dict[str, dict]):
-    fields = ["office_hours", "weekend_availability", "location", "insurance_accepted"]
-    lines = ["# Cross-call consistency", "", "| Call | " + " | ".join(fields) + " |"]
-    lines.append("| --- " * (len(fields) + 1) + "|")
+    lines = ["# Cross-call consistency", "",
+             "| Call | " + " | ".join(CONSISTENCY_FIELDS) + " |"]
+    lines.append("| --- " * (len(CONSISTENCY_FIELDS) + 1) + "|")
 
     for filename in sorted(claims):
-        cells = [str(claims[filename].get(f) or "-").replace("|", "/") for f in fields]
+        cells = [str(claims[filename].get(f) or "-").replace("|", "/")
+                 for f in CONSISTENCY_FIELDS]
         lines.append(f"| {filename} | " + " | ".join(cells) + " |")
 
     (ANALYSIS_DIR / "consistency.md").write_text("\n".join(lines) + "\n")
