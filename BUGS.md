@@ -9,11 +9,9 @@ Candidates came from [`analyze.py`](analyze.py); everything below was then check
 hand against the recording. Timestamps are positions in the audio, so a citation can be
 played directly.
 
-**One flagged candidate was discarded on verification.** The triage pass reported an
-appointment booked on a "non-existent date" — the agent said *"tomorrow, Tuesday, August
-18th"* and 18 August 2026 is in fact a Tuesday. Anything resting on a transcription
-artifact was dropped the same way; the transcripts run on 8kHz phone audio and misread
-things the agent never said.
+**Three candidates were discarded on verification** — including two where the transcript
+showed the agent naming a different practice and the audio showed it had not. Those are
+listed at the end, because what a bug report throws out says as much as what it keeps.
 
 ---
 
@@ -196,15 +194,24 @@ Never a yes or a no. For a prospective patient choosing a clinic, this is the qu
 
 ---
 
-## Checked and found consistent
+---
 
-Worth stating, since it was expected to fail and did not: **office hours are identical
-across all five calls that stated them** — Mon/Tue/Thu 09:00–16:00, Wed 12:00–19:00, Fri
-09:00–12:00, closed weekends. See [`analysis/consistency.md`](analysis/consistency.md).
+## Checked and not reported
 
-## Open — needs audio verification
+**Two apparent wrong-practice-name bugs were rejected on listening.** The transcripts show
+the agent saying "Davenport Orthopedics" (`20260817-221635-new_knee` `[02:47]`) and
+"Getterpoi Orthopedics" (`20260818-183630-vague` `[02:28]`). The audio says **"Pivot Point
+Orthopedics"** in both cases. These are speech-recognition errors on 8kHz phone audio, not
+anything the agent said, and reporting them would have been a false accusation.
 
-Two calls appear to name a different practice — "Davenport Orthopedics"
-(`20260817-221635-new_knee` `[02:47]`) and "Getterpoi Orthopedics"
-(`20260818-183630-vague` `[02:28]`). Both may be speech-recognition artifacts rather than
-anything the agent said. Not claimed as findings until confirmed against the audio.
+**An appointment "scheduled on a non-existent date" was rejected on checking.** The agent
+said *"tomorrow, Tuesday, August 18th"* on a call placed Monday 17 August 2026. 18 August
+2026 is a Tuesday. The agent was right.
+
+**Office hours are consistent.** Expected to vary, and they do not: identical across all
+five calls that stated them — Mon/Tue/Thu 09:00–16:00, Wed 12:00–19:00, Fri 09:00–12:00,
+closed weekends. See [`analysis/consistency.md`](analysis/consistency.md).
+
+Three candidates went in and did not survive. The transcripts are produced by speech
+recognition on narrowband phone audio and are treated as a search index, not as evidence —
+every quote above was confirmed against the recording it cites.
